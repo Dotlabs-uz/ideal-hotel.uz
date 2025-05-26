@@ -8,7 +8,7 @@ export const contactsData = {
     },
     {
       icon: "/images/icon/mail.png",
-      title: "Электронная почта",
+      title: "Почта",
       description: "Отправьте нам письмо — мы скоро ответим.",
       contact: "info@idealhotel.uz"
     },
@@ -16,7 +16,7 @@ export const contactsData = {
       icon: "/images/icon/booking.png",
       title: "Бронирование",
       description: "Забронируйте столик или запись за пару кликов.",
-      contact: "Забронировать сейчас",
+      contact: "Забронировать",
       arrow: true
     }
   ],
