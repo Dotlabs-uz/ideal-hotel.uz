@@ -11,7 +11,7 @@ interface contactForm {
 const ContactInfo = ({ translation }: contactForm) => {
   return (
     <div className="text-[#fff]">
-        <h1 className='text-[36px]'>{translation.header}</h1>
+        <h1 className='text-[36px] mb-[30px]'>{translation.header}</h1>
         <p className='text-[18px] w-[434px] font-light'>{translation.txt}</p>
     </div>
   );
