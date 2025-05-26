@@ -52,5 +52,13 @@
     "contactInfo": {
         "header": "Send us a message!",
         "txt": "If you need help with your reservation, need support, or just want to say hi, feel free to get in touch with below."
+    },
+    "footer": {
+        "rooms": "Rooms",
+        "services": "Services",
+        "contacts": "Contacts",
+        "about": "About",
+        "workingDays": "Monday to Friday: 9:00 AM – 6:00 PM",
+        "bookNow": "Book Now"
     }
 }

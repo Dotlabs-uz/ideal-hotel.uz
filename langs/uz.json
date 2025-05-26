@@ -52,5 +52,14 @@
     "contactInfo": {
         "header": "Bizga xabar yuboring!",
         "txt": "Agar bron qilishda yordam kerak bo‘lsa, qo‘llab-quvvatlash yoki salomlashmoqchi bo‘lsangiz, quyidagi aloqa orqali bog‘laning."
+    },
+    "footer": {
+        "rooms": "Xonalar",
+        "services": "Xizmatlar",
+        "contacts": "Aloqa",
+        "about": "Biz haqimizda",
+        "workingDays": "Dushanbadan jumagacha: 9:00 – 18:00",
+        "bookNow": "Bron qilish"
     }
+
 }

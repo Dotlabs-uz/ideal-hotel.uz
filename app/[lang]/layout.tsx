@@ -28,7 +28,7 @@ export default async function RootLayout({
 
         <Header lang={lang} translation={translation} />
         {children}
-        <Footer />
+        <Footer lang={lang} translation={translation.footer} />
       </body>
     </html>
   );
