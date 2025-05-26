@@ -1,0 +1,56 @@
+{
+    "Header": {
+        "Numbers": "Raqamlar",
+        "About": "Biz haqimizda",
+        "Contacts": "Aloqalar",
+        "Book": "Band qilish"
+    },
+    "banner": {
+        "welcome": "XUSH KELIBSIZ",
+        "bannerTxt": "Har bir hissiyotga boy lahzalar uchun mehmonxona",
+        "animationTxt": "Har bir lahza goʻyo jannat manzarasida birinchi marta kabi tuyuladi"
+    },
+    "advantages": {
+        "services": "Удобства и услуги",
+        "advantages": "Преимущества",
+        "btnTxt": "Ознакомиться с услугами",
+        "txt": "Для вашего удобства на территории комплекса есть много дополнительных услуг"
+    },
+    "numberFond": {
+        "numberFond": "Хона фонди",
+        "enjoyTxt": "Ҳар бир батафсил қулайлигингиз учун диққат билан ўйланилган, бизнинг хоналаримизда ажойиб қулайликдан баҳраманд бўлинг.",
+        "seeAll": "Ҳаммасини кўриш",
+        "all": "Ҳамма",
+        "standart": "Стандарт",
+        "deluxe": "Делюкс",
+        "lux": "Люкс"
+    },
+    "services": {
+      "servic": "Qulayliklar va xizmatlar",
+      "breackfast": "Nonushta va xizmatlar",
+      "breackfastTxt": "Sizning qulayligingiz uchun majmuada ko'plab qo'shimcha xizmatlar mavjud"
+    },
+    "Home": {
+        "title": "title uz"
+    },
+    "fondBanners": {
+        "numberFond": "Xonalar va lyukslar",
+        "subtitle": "Ideal mehmonxonasi eshiklarini ochib, dunyoning barcha burchaklaridan kelgan talabchan sayohatchilarni kutib oladi"
+    },
+    "contact": {
+        "numberFond": "Aloqalar",
+        "subtitle": "Agar sizga buyurtma berishda yordam yoki qo‘llab-quvvatlash kerak bo‘lsa, quyidagi kontaktlar orqali biz bilan bog‘laning."
+    },
+    "contactForm": {
+        "header": "Bizga xabar qoldiring",
+        "txt": "Turli narx variantlari, kurs bo‘yicha yo‘riqnoma va boshqa qulayliklar.",
+        "name": "Ismingiz",
+        "mail": "Elektron pochtangiz",
+        "messages": "Bizga xabar qoldiring",
+        "btn": "Xabar yuborish"
+    },
+    "contactInfo": {
+        "header": "Bizga xabar yuboring!",
+        "txt": "Agar bron qilishda yordam kerak bo‘lsa, qo‘llab-quvvatlash yoki salomlashmoqchi bo‘lsangiz, quyidagi aloqa orqali bog‘laning."
+    }
+}

@@ -1,0 +1,47 @@
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+
+interface HeroRoomsProps {
+  translation: {
+      numberFond: string;
+      subtitle: string;
+  };
+}
+
+const HeroRooms = ({ translation }: HeroRoomsProps) => {
+  return (
+    <section className="relative w-full h-[350px] md:h-[400px] lg:h-[500px] text-white">
+      {/* Фоновое изображение */}
+      <Image
+        src="/BannerImages/nextBanner.png"
+        alt="Rooms Background"
+        fill
+        className="object-cover"
+        priority
+      />
+        <div className="absolute top-[120px] left-6 md:left-12 lg:left-24 z-10">
+            <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-white hover:text-gray-200 transition-colors text-sm md:text-base mb-4"
+            >
+            <Image src="/images/back.png" alt='back' width={50} height={50} className='w-[30px] md:w-[40px] lg:w-[50px]' />
+            </Link>
+        </div>
+      <div className="absolute bottom-[50px] left-6 md:left-12 lg:left-24 z-10">
+        {/* Кнопка Назад */}
+
+        {/* Заголовок и описание */}
+        <h1 className="text-[36px] md:text-[56px] lg:text-[88px] font-bold mb-2">
+          {translation.numberFond}
+        </h1>
+        <p className="text-[12px] md:text-[18px] lg:text-[24px] w-[300px] md:w-2xl">
+          {translation.subtitle}
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default HeroRooms;

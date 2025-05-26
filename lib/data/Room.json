@@ -1,0 +1,92 @@
+[
+  {
+    "id": "lux01",
+    "category": "lux",
+    "image": "/images/room/standart.png",
+    "title": {
+      "ru": "Люкс номер",
+      "uz": "Lyuks xona",
+      "en": "Luxury Room"
+    },
+    "features": {
+      "ru": ["До 2х гостей", "52м²", "1 кровать на двоих"],
+      "uz": ["2 kishigacha", "52m²", "1 ta ikki kishilik to'shak"],
+      "en": ["Up to 2 guests", "52m²", "1 double bed"]
+    }
+  },
+  {
+    "id": "deluxe01",
+    "category": "deluxe",
+    "image": "/images/room/standart.png",
+    "title": {
+      "ru": "Делюкс номер",
+      "uz": "Deluxe xona",
+      "en": "Deluxe Room"
+    },
+    "features": {
+      "ru": ["До 3х гостей", "45м²", "1 двуспальная кровать"],
+      "uz": ["3 kishigacha", "45m²", "1 ta ikki kishilik to'shak"],
+      "en": ["Up to 3 guests", "45m²", "1 double bed"]
+    }
+  },
+  {
+    "id": "standart01",
+    "category": "standart",
+    "image": "/images/room/standart.png",
+    "title": {
+      "ru": "Стандарт номер",
+      "uz": "Standart xona",
+      "en": "Standard Room"
+    },
+    "features": {
+      "ru": ["До 2х гостей", "30м²", "2 односпальные кровати"],
+      "uz": ["2 kishigacha", "30m²", "2 ta yotoq"],
+      "en": ["Up to 2 guests", "30m²", "2 single beds"]
+    }
+  },
+  {
+    "id": "standart02",
+    "category": "standart",
+    "image": "/images/room/standart.png",
+    "title": {
+      "ru": "Стандарт номер",
+      "uz": "Standart xona",
+      "en": "Standard Room"
+    },
+    "features": {
+      "ru": ["До 2х гостей", "30м²", "2 односпальные кровати"],
+      "uz": ["2 kishigacha", "30m²", "2 ta yotoq"],
+      "en": ["Up to 2 guests", "30m²", "2 single beds"]
+    }
+  },
+  {
+    "id": "standart03",
+    "category": "standart",
+    "image": "/images/room/standart.png",
+    "title": {
+      "ru": "Стандарт номер",
+      "uz": "Standart xona",
+      "en": "Standard Room"
+    },
+    "features": {
+      "ru": ["До 2х гостей", "30м²", "2 односпальные кровати"],
+      "uz": ["2 kishigacha", "30m²", "2 ta yotoq"],
+      "en": ["Up to 2 guests", "30m²", "2 single beds"]
+    }
+  },
+  {
+    "id": "standart04",
+    "category": "standart",
+    "image": "/images/room/standart.png",
+    "title": {
+      "ru": "Стандарт номер",
+      "uz": "Standart xona",
+      "en": "Standard Room"
+    },
+    "features": {
+      "ru": ["До 2х гостей", "30м²", "2 односпальные кровати"],
+      "uz": ["2 kishigacha", "30m²", "2 ta yotoq"],
+      "en": ["Up to 2 guests", "30m²", "2 single beds"]
+    }
+  }
+]

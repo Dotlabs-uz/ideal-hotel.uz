@@ -1,0 +1,56 @@
+{
+    "Header": {
+        "Numbers": "Numbers",
+        "About": "About Us",
+        "Contacts": "Contacts",
+        "Book": "to Book"
+    },
+    "banner": {
+        "welcome": "WELCOME TO",
+        "bannerTxt": "Hotel for every moment rich in emotion",
+        "animationTxt": "Every moment feels like the first time in paradise view"
+    },
+    "advantages": {
+        "services": "Удобства и услуги",
+        "advantages": "Преимущества",
+        "btnTxt": "Ознакомиться с услугами",
+        "txt": "Для вашего удобства на территории комплекса есть много дополнительных услуг"
+    },
+    "numberFond": {
+        "numberFond": "Room Inventory",
+        "enjoyTxt": "Enjoy excellent comfort in our rooms, where every detail is thoughtfully designed for your convenience.",
+        "seeAll": "See all",
+        "all": "All",
+        "standart": "Standard",
+        "deluxe": "Deluxe",
+        "lux": "Lux"
+    },
+    "services": {
+      "servic": "Amenities and services",
+      "breackfast": "Breakfast and services",
+      "breackfastTxt": "For your convenience, the complex offers many additional services"
+    },
+    "Home": {
+        "title": "title en"
+    },
+    "fondBanners": {
+        "numberFond": "Rooms and Suites",
+        "subtitle": "With the opening of its doors, the Ideal hotel welcomes discerning travelers from all corners"
+    },
+    "contact": {
+        "numberFond": "Contacts",
+        "subtitle": "If you need help with your reservation, need support, feel free to get in touch with us below."
+    },
+    "contactForm": {
+        "header": "Leave us a message",
+        "txt": "Varius pretium consequat cursus iaculis amet con donec litum consequat.",
+        "name": "Your name",
+        "mail": "Your email",
+        "messages": "Leave us a message",
+        "btn": "Send message"
+    },
+    "contactInfo": {
+        "header": "Send us a message!",
+        "txt": "If you need help with your reservation, need support, or just want to say hi, feel free to get in touch with below."
+    }
+}
