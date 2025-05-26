@@ -1,3 +1,4 @@
+import ContactsLink from "@/Components/ContactPage/ContactLink";
 import ContactMid from "@/Components/ContactPage/ContactMid";
 import ContactMap from "@/Components/HomePage/ContactMap";
 import FAQ from "@/Components/ui/Faq";
@@ -15,6 +16,7 @@ export default async function contact({params}:{params:{lang:Locale}}) {
 	<main className="">
         <div className="">
           <HeroRooms translation={translation.contact}/>
+          <ContactsLink lang={lang} />
           <ContactMid translation={translation}/>
           <FAQ />
           <ContactMap />

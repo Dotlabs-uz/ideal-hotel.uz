@@ -12,7 +12,7 @@ interface HeroRoomsProps {
 
 const HeroRooms = ({ translation }: HeroRoomsProps) => {
   return (
-    <section className="relative w-full h-[350px] md:h-[400px] lg:h-[500px] text-white">
+    <section className="relative w-full h-[280px] md:h-[400px] lg:h-[500px] text-white">
       {/* Фоновое изображение */}
       <Image
         src="/BannerImages/nextBanner.png"
@@ -21,7 +21,7 @@ const HeroRooms = ({ translation }: HeroRoomsProps) => {
         className="object-cover"
         priority
       />
-        <div className="absolute top-[120px] left-6 md:left-12 lg:left-24 z-10">
+        <div className="absolute top-[80px] left-6 md:left-12 md:top-[100px] lg:left-24 lg:top-[130px] z-10">
             <Link
             href="/"
             className="inline-flex items-center gap-2 text-white hover:text-gray-200 transition-colors text-sm md:text-base mb-4"

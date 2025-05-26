@@ -21,14 +21,13 @@ interface contactForm {
 
 const ContactMid = ({ translation }: contactForm) => {
   return (
-    <div className="w-full bg-[#17849A] my-[100px] h-[371px] shadow-md">
-        <div className="relative max-w-6xl mx-auto px-4 py-[20px] flex items-center h-full justify-between">
+    <div className="w-full bg-[#17849A] my-[10px] mb-[390px] md:my-[100px] h-[300px] md:h-[371px] shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 py-[40px] flex items-center h-full flex-wrap md:flex-nowrap justify-between">
             <ContactInfo translation={translation.contactInfo} />
-            <div className="absolute top-[-50px] px-[20px] right-0">
+            <div className="w-fit mx-auto mt-[20px] md:mt-[0]">
                 <ContactForm translation={translation.contactForm}  />
             </div>
         </div>
-
     </div>
   );
 };

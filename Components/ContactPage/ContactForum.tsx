@@ -13,7 +13,7 @@ interface contactForm {
 
 const ContactForm = ({translation}: contactForm ) => {
   return (
-    <div className=" md:w-[527px] mx-auto p-6 bg-[#F8F8F8] rounded-lg shadow-md">
+    <div className=" md:max-w-[527px] mx-auto p-6 bg-[#F8F8F8] rounded-lg shadow-md">
       <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-medium text-[#17849A] mb-4">{translation.header}</h2>
       
       <p className="text-gray-600 text-[10px] md:text-[12px] w-[250px] lg:w-[300px] lg:text-[14px] mb-6">
