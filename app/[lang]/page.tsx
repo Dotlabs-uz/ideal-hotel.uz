@@ -9,7 +9,9 @@ import FAQ from "@/Components/ui/Faq";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 
-export default async function Home({params}:{params:{lang:Locale}}) {
+type Params = Promise<{ lang: Locale }>
+
+export default async function Home({params}:{params:Params}) {
 	
  const { lang } = await params
 
@@ -19,7 +21,6 @@ export default async function Home({params}:{params:{lang:Locale}}) {
   
 
   return (
-		<main className="">
       <div className="">
 				<Banner translation={translation} />
         <RoomFund translation={translation} />
@@ -30,6 +31,5 @@ export default async function Home({params}:{params:{lang:Locale}}) {
         <FAQ />
         <ContactMap />
       </div>
-		</main>
   );
 }

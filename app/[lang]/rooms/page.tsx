@@ -3,7 +3,10 @@ import HeroRooms from "@/Components/ui/nextBanner";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 
-export default async function rooms({params}:{params:{lang:Locale}}) {
+type Params = Promise<{ lang: Locale }>
+
+
+export default async function Rooms({params}:{params:Params}) {
 	
  const { lang } = await params
 
@@ -13,11 +16,9 @@ export default async function rooms({params}:{params:{lang:Locale}}) {
   
 
   return (
-	<main className="">
         <div className="">
           <HeroRooms translation={translation.fondBanners}/>
           <RoomScreen translation={translation}/>
         </div>
-	</main>
   );
 }

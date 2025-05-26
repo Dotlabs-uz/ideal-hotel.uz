@@ -6,14 +6,15 @@ import HeroRooms from "@/Components/ui/nextBanner";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 
-export default async function contact({params}:{params:{lang:Locale}}) {
+type Params = Promise<{ lang: Locale }>
+
+export default async function Contact({params}:{params:Params}) {
 	
- const { lang } = await params
+ const { lang } =await params
 
   const translation = await getDictionary(lang);
 
   return (
-	<main className="">
         <div className="">
           <HeroRooms translation={translation.contact}/>
           <ContactsLink lang={lang} />
@@ -21,6 +22,5 @@ export default async function contact({params}:{params:{lang:Locale}}) {
           <FAQ />
           <ContactMap />
         </div>
-	</main>
   );
 }
