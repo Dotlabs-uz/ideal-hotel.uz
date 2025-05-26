@@ -53,6 +53,12 @@
         "header": "Bizga xabar yuboring!",
         "txt": "Agar bron qilishda yordam kerak bo‘lsa, qo‘llab-quvvatlash yoki salomlashmoqchi bo‘lsangiz, quyidagi aloqa orqali bog‘laning."
     },
+    "about": {
+        "header": "Mehmonxona haqida",
+        "txt": "Ideal mehmonxonasi eshiklarini ochib, dunyoning barcha burchaklaridan tashrif buyuruvchilarni kutib oladi",
+        "Impression": "Oila davrasida zavq olish mumkin bo‘lgan ko‘plab taassurotlar",
+        "impTxt": "Ullamcorper enim augue gravida senectus lorem placerat feugiat scelerisque malesuada tristique in ultrices enim est felis neque volutpat pulvinar in id ultricies id suspendisse hendrerit sapien tincidunt a orci."
+    },
     "footer": {
         "rooms": "Xonalar",
         "services": "Xizmatlar",

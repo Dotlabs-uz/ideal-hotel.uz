@@ -20,7 +20,7 @@ const navLinks = [
   { key: 'rooms', href: '/rooms' },
   { key: 'services', href: '/services' },
   { key: 'contacts', href: '/contact' },
-  { key: 'about', href: '/about' }
+  { key: 'about', href: '/About' }
 ];
 
 const socialLinks = [

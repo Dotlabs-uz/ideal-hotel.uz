@@ -24,7 +24,9 @@ const Header = ({ lang, translation }: HeaderProps) => {
 
         <nav className="hidden md:flex items-center gap-6">
           <a href="#numbers" className="hover:underline">{translation.Header.Numbers}</a>
-          <a href="#about" className="hover:underline">{translation.Header.About}</a>
+          <Link href={`/${lang}/About`} className="hover:underline">
+            {translation.Header.About}
+          </Link>
           <Link href={`/${lang}/contact`} className="hover:underline">
             {translation.Header.Contacts}
           </Link>
@@ -48,7 +50,9 @@ const Header = ({ lang, translation }: HeaderProps) => {
         <div className="md:hidden bg-black/90 backdrop-blur-sm px-4 pb-4">
           <nav className="flex flex-col gap-4 mt-4">
             <a href="#numbers" className="hover:underline">{translation.Header.Numbers}</a>
-            <a href="#about" className="hover:underline">{translation.Header.About}</a>
+            <Link href={`/${lang}/About`} className="hover:underline">
+              {translation.Header.About}
+            </Link>
             <Link href={`/${lang}/contact`} className="hover:underline">
               {translation.Header.Contacts}
             </Link>

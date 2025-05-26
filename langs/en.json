@@ -53,6 +53,12 @@
         "header": "Send us a message!",
         "txt": "If you need help with your reservation, need support, or just want to say hi, feel free to get in touch with below."
     },
+    "about": {
+        "header": "About the hotel",
+        "txt": "With the opening of its doors, the Ideal hotel welcomes discerning travelers from all corners",
+        "Impression": "Plenty of impressions to enjoy with your family",
+        "impTxt": "Ullamcorper enim augue gravida senectus lorem placerat feugiat scelerisque malesuada tristique in ultrices enim est felis neque volutpat pulvinar in id ultricies id suspendisse hendrerit sapien tincidunt a orci."
+    },
     "footer": {
         "rooms": "Rooms",
         "services": "Services",
