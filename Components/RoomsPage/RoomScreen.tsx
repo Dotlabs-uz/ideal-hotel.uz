@@ -70,7 +70,7 @@ const RoomScreen = ({ translation }: numberFond) => {
                 ))}
             </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pb-[20px] md:pb-[50px] lg:pb-[80px]">
             {Array.from({ length: 6 }).map((_, index) => {
                 const room = filteredRooms[index];
                 return room ? (
