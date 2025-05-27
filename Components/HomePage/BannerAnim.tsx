@@ -20,7 +20,7 @@ const BannerAnim = ({ translation }: BannerProps) => {
 
         <div className="text-white z-10 max-w-[200px]">
             <h2 className="text-[20px] font-medium mb-6">
-            {translation.banner.animationTxt}
+              {translation.banner.animationTxt}
             </h2>
         </div>
 

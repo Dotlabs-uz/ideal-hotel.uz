@@ -1,9 +1,12 @@
 'use client'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import rooms from '@/lib/data/Room.json';
 import RoomCard from '../ui/CardRoom';
 import Link from 'next/link';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '../ui/dialog';
+import CardModal from '../ui/CardModal';
+import { mapRoomToCardData } from '@/lib/mapRoomToCardData';
 
 type RoomCategory = 'all' | 'standart' | 'deluxe' | 'lux';
 
@@ -22,6 +25,8 @@ interface numberFond {
 }
 
 const RoomFund = ({ translation }: numberFond) => {
+    const [selectedRoom, setSelectedRoom] = useState<typeof rooms[0] | null>(null);
+    const [open, setOpen] = useState(false);
     const router = useRouter();
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -41,6 +46,11 @@ const RoomFund = ({ translation }: numberFond) => {
         const params = new URLSearchParams(searchParams);
         params.set('category', category);
         router.push(`?${params.toString()}`, { scroll: false });
+    };
+
+    const handleOpenRoom = (room: typeof rooms[0]) => {
+        setSelectedRoom(room);
+        setOpen(true);
     };
 
     const filteredRooms = rooms.filter(room =>
@@ -99,6 +109,7 @@ const RoomFund = ({ translation }: numberFond) => {
                     image={room.image}
                     title={room.title[locale]}
                     features={room.features[locale]}
+                    onClick={() => handleOpenRoom(room)}
                 />
                 ) : (
                 <div key={index} className="bg-gray-100 rounded-[4px]" />
@@ -110,14 +121,23 @@ const RoomFund = ({ translation }: numberFond) => {
                  {filteredRooms.map((room) => (
                  <div key={room.id} className="min-w-[180px] lg:min-w-[300px]">
                      <RoomCard
-                     image={room.image}
-                     title={room.title[locale]}
-                     features={room.features[locale]}
+                        key={room.id}
+                        image={room.image}
+                        title={room.title[locale]}
+                        features={room.features[locale]}
+                        onClick={() => handleOpenRoom(room)}
                      />
                  </div>
                  ))}
              </div>
         </div>
+            {selectedRoom && (
+                <CardModal
+                open={open}
+                onOpenChange={setOpen}
+                card={mapRoomToCardData(selectedRoom, locale)}
+                />
+            )}
 
             <div className="block md:hidden text-center mt-[20px]">
                 <Link

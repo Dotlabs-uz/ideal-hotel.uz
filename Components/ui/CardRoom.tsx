@@ -1,12 +1,17 @@
+import { useState } from "react";
+
 type RoomCardProps = {
   image: string;
   title: string;
   features: string[];
+  onClick?: () => void;
 };
 
-const RoomCard = ({ image, title, features }: RoomCardProps) => {
+const RoomCard = ({ image, title, features, onClick }: RoomCardProps) => {
+
   return (
-    <div className="max-w-[418px] rounded overflow-hidden">
+    <div className="max-w-[418px] rounded overflow-hidden" 
+    onClick={onClick}>
       <img src={image} alt={title} className="w-[209px] sm:w-[260px] md:w-[300px] lg:w-[418px] bg-cover bg-center" />
       {/* h-[209px] sm:h-[260px] md:h-[300px] lg:h-[419px] */}
 

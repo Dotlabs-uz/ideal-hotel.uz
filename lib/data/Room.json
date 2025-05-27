@@ -14,17 +14,16 @@
       "en": ["Up to 2 guests", "52m²", "1 double bed"]
     },
     "description": {
-      "ru": "Просторный люкс с элегантным интерьером и современными удобствами.",
-      "uz": "Zamonaviy qulayliklarga ega keng va hashamatli lyuks xona.",
-      "en": "Spacious luxury suite with elegant decor and modern amenities."
+      "ru": "Современный и уютный номер с необходимыми удобствами для комфортного отдыха и расслабления гостей.",
+      "uz": "Zamonaviy va shinam xona, barcha kerakli qulayliklar bilan jihozlangan, dam olish uchun ideal.",
+      "en": "Modern and cozy room equipped with all essential amenities for guests to relax comfortably."
     },
     "amenities": ["Стол", "Телевизор", "Кровать King-size", "Балкон", "Мини-бар", "Сейф"],
     "amenities2": ["Кондиционер", "Халаты", "Тапочки", "Фен", "Электрочайник", "Wi-Fi"],
     "gallery": [
-      "/images/room/lux01_1.jpg",
-      "/images/room/lux01_2.jpg",
-      "/images/room/lux01_3.jpg",
-      "/images/room/lux01_4.jpg"
+      "/images/ModalRoom/roomOne.png",
+      "/images/ModalRoom/roomTwo.png",
+      "/images/ModalRoom/roomThree.png"
     ],
     "thumbnails": [
       "/images/room/thumbs/lux01_1.jpg",
@@ -47,17 +46,16 @@
       "en": ["Up to 3 guests", "45m²", "1 double bed"]
     },
     "description": {
-      "ru": "Современный номер с уютной атмосферой и всем необходимым для комфортного отдыха.",
-      "uz": "Zamonaviy va shinam xona, qulay dam olish uchun barcha qulayliklarga ega.",
-      "en": "Modern and cozy room with everything needed for a relaxing stay."
+      "ru": "Просторный люкс с элегантным интерьером и всеми современными удобствами для комфортного и приятного отдыха.",
+      "uz": "Keng va hashamatli lyuks xona, zamonaviy qulayliklar bilan jihozlangan, qulay va yoqimli dam olish uchun.",
+      "en": "Spacious luxury suite with elegant decor and modern amenities for a comfortable and pleasant stay."
     },
     "amenities": ["Стол", "Телевизор", "Двуспальная кровать", "Гардероб", "Мини-бар"],
     "amenities2": ["Wi-Fi", "Кондиционер", "Полотенца", "Фен", "Чайник"],
     "gallery": [
-      "/images/room/deluxe01_1.jpg",
-      "/images/room/deluxe01_2.jpg",
-      "/images/room/deluxe01_3.jpg",
-      "/images/room/deluxe01_4.jpg"
+      "/images/ModalRoom/roomOne.png",
+      "/images/ModalRoom/roomTwo.png",
+      "/images/ModalRoom/roomThree.png"
     ],
     "thumbnails": [
       "/images/room/thumbs/deluxe01_1.jpg",
@@ -80,17 +78,16 @@
       "en": ["Up to 2 guests", "30m²", "2 single beds"]
     },
     "description": {
-      "ru": "Уютный стандартный номер с базовыми удобствами по доступной цене.",
-      "uz": "Qulay va arzon narxda standart xona, asosiy qulayliklar bilan.",
-      "en": "Comfortable and affordable standard room with essential amenities."
+      "ru": "Просторный люкс с элегантным интерьером и всеми современными удобствами для комфортного и приятного отдыха.",
+      "uz": "Keng va hashamatli lyuks xona, zamonaviy qulayliklar bilan jihozlangan, qulay va yoqimli dam olish uchun.",
+      "en": "Spacious luxury suite with elegant decor and modern amenities for a comfortable and pleasant stay."
     },
     "amenities": ["Письменный стол", "Односпальные кровати", "Телевизор", "Шкаф", "Стул"],
     "amenities2": ["Полотенца", "Фен", "Wi-Fi", "Окно", "Чайник"],
     "gallery": [
-      "/images/room/standart01_1.jpg",
-      "/images/room/standart01_2.jpg",
-      "/images/room/standart01_3.jpg",
-      "/images/room/standart01_4.jpg"
+      "/images/ModalRoom/roomOne.png",
+      "/images/ModalRoom/roomTwo.png",
+      "/images/ModalRoom/roomThree.png"
     ],
     "thumbnails": [
       "/images/room/thumbs/standart01_1.jpg",
@@ -113,17 +110,16 @@
       "en": ["Up to 2 guests", "30m²", "2 single beds"]
     },
     "description": {
-      "ru": "Идеально подходит для деловых поездок или короткого отпуска.",
-      "uz": "Qisqa muddatli dam olish yoki ish safarlari uchun mos xona.",
-      "en": "Ideal for business trips or a short vacation."
+      "ru": "Просторный люкс с элегантным интерьером и всеми современными удобствами для комфортного и приятного отдыха.",
+      "uz": "Keng va hashamatli lyuks xona, zamonaviy qulayliklar bilan jihozlangan, qulay va yoqimli dam olish uchun.",
+      "en": "Spacious luxury suite with elegant decor and modern amenities for a comfortable and pleasant stay."
     },
     "amenities": ["Рабочий стол", "Телевизор", "Односпальные кровати", "Гардероб"],
     "amenities2": ["Wi-Fi", "Кондиционер", "Полотенца", "Фен"],
     "gallery": [
-      "/images/room/standart02_1.jpg",
-      "/images/room/standart02_2.jpg",
-      "/images/room/standart02_3.jpg",
-      "/images/room/standart02_4.jpg"
+      "/images/ModalRoom/roomOne.png",
+      "/images/ModalRoom/roomTwo.png",
+      "/images/ModalRoom/roomThree.png"
     ],
     "thumbnails": [
       "/images/room/thumbs/standart02_1.jpg",
@@ -146,17 +142,16 @@
       "en": ["Up to 2 guests", "30m²", "2 single beds"]
     },
     "description": {
-      "ru": "Стильный и практичный номер с базовым набором удобств.",
-      "uz": "Zamonaviy va qulay xona, barcha asosiy shart-sharoitlar bilan.",
-      "en": "Stylish and practical room with a basic set of amenities."
+      "ru": "Просторный люкс с элегантным интерьером и всеми современными удобствами для комфортного и приятного отдыха.",
+      "uz": "Keng va hashamatli lyuks xona, zamonaviy qulayliklar bilan jihozlangan, qulay va yoqimli dam olish uchun.",
+      "en": "Spacious luxury suite with elegant decor and modern amenities for a comfortable and pleasant stay."
     },
     "amenities": ["Телевизор", "Две кровати", "Шкаф", "Письменный стол"],
     "amenities2": ["Wi-Fi", "Фен", "Кондиционер", "Полотенца"],
     "gallery": [
-      "/images/room/standart03_1.jpg",
-      "/images/room/standart03_2.jpg",
-      "/images/room/standart03_3.jpg",
-      "/images/room/standart03_4.jpg"
+      "/images/ModalRoom/roomOne.png",
+      "/images/ModalRoom/roomTwo.png",
+      "/images/ModalRoom/roomThree.png"
     ],
     "thumbnails": [
       "/images/room/thumbs/standart03_1.jpg",
@@ -179,17 +174,16 @@
       "en": ["Up to 2 guests", "30m²", "2 single beds"]
     },
     "description": {
-      "ru": "Чистый и светлый номер с необходимыми удобствами.",
-      "uz": "Toza va yorug' xona, zarur sharoitlarga ega.",
-      "en": "Clean and bright room with essential facilities."
+      "ru": "Просторный люкс с элегантным интерьером и всеми современными удобствами для комфортного и приятного отдыха.",
+      "uz": "Keng va hashamatli lyuks xona, zamonaviy qulayliklar bilan jihozlangan, qulay va yoqimli dam olish uchun.",
+      "en": "Spacious luxury suite with elegant decor and modern amenities for a comfortable and pleasant stay."
     },
     "amenities": ["Односпальные кровати", "Шкаф", "Телевизор", "Рабочее место"],
     "amenities2": ["Полотенца", "Чайник", "Wi-Fi", "Фен"],
     "gallery": [
-      "/images/room/standart04_1.jpg",
-      "/images/room/standart04_2.jpg",
-      "/images/room/standart04_3.jpg",
-      "/images/room/standart04_4.jpg"
+      "/images/ModalRoom/roomOne.png",
+      "/images/ModalRoom/roomTwo.png",
+      "/images/ModalRoom/roomThree.png"
     ],
     "thumbnails": [
       "/images/room/thumbs/standart04_1.jpg",
