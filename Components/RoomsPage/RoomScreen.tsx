@@ -1,9 +1,10 @@
 'use client'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import rooms from '@/lib/data/Room.json';
 import RoomCard from '../ui/CardRoom';
-import Link from 'next/link';
+import CardModal from '../ui/CardModal';
+import { mapRoomToCardData } from '@/lib/mapRoomToCardData';
 
 type RoomCategory = 'all' | 'standart' | 'deluxe' | 'lux';
 
@@ -22,6 +23,8 @@ interface numberFond {
 }
 
 const RoomScreen = ({ translation }: numberFond) => {
+    const [selectedRoom, setSelectedRoom] = useState<typeof rooms[0] | null>(null);
+    const [open, setOpen] = useState(false);
     const router = useRouter();
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -43,6 +46,11 @@ const RoomScreen = ({ translation }: numberFond) => {
         router.push(`?${params.toString()}`, { scroll: false });
     };
 
+    const handleOpenRoom = (room: typeof rooms[0]) => {
+        setSelectedRoom(room);
+        setOpen(true);
+    };
+
     const filteredRooms = rooms.filter(room =>
         activeCategory === 'all' ? true : room.category === activeCategory
     );
@@ -50,44 +58,52 @@ const RoomScreen = ({ translation }: numberFond) => {
     const segments = pathname.split('/');
     const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
 
-  return (
-    <section className="max-w-6xl mx-auto pt-[80px] px-6">
-      <div>
-        <div className="flex lg:justify-between flex-wrap sm:flex-wrap md:flex-wrap items-start gap-0 md:gap-[10px] lg:gap-0 ">
-            <div className="flex w-full justify-center flex-wrap gap-1 lg:gap-4 mb-[15px] lg:mb-12">
-                {categories.map((category) => (
-                <button
-                    key={category.id}
-                    onClick={() => handleClick(category.id)}
-                    className={`text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] px-6 py-2 rounded-[4px] mt-[26px] transition-colors ${
-                    activeCategory === category.id
-                        ? 'bg-[#17849A] text-white'
-                        : 'bg-white text-[#17849A] border border-gray-200 hover:bg-gray-50'
-                    }`}
-                >
-                    {category.name}
-                </button>
-                ))}
+    return (
+        <section className="max-w-6xl mx-auto pt-[80px] px-6">
+            <div>
+                <div className="flex lg:justify-between flex-wrap items-start gap-0 md:gap-[10px] lg:gap-0 ">
+                    <div className="flex w-full justify-center flex-wrap gap-1 lg:gap-4 mb-[15px] lg:mb-12">
+                        {categories.map((category) => (
+                            <button
+                                key={category.id}
+                                onClick={() => handleClick(category.id)}
+                                className={`text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] px-6 py-2 rounded-[4px] mt-[26px] transition-colors ${
+                                    activeCategory === category.id
+                                        ? 'bg-[#17849A] text-white'
+                                        : 'bg-white text-[#17849A] border border-gray-200 hover:bg-gray-50'
+                                }`}
+                            >
+                                {category.name}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pb-[20px] md:pb-[50px] lg:pb-[80px]">
+                    {Array.from({ length: 6 }).map((_, index) => {
+                        const room = filteredRooms[index];
+                        return room ? (
+                            <RoomCard
+                                key={room.id}
+                                image={room.image}
+                                title={room.title[locale]}
+                                features={room.features[locale]}
+                                onClick={() => handleOpenRoom(room)}
+                            />
+                        ) : (
+                            <div key={index} className="bg-gray-100 rounded-[4px]" />
+                        );
+                    })}
+                </div>
             </div>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pb-[20px] md:pb-[50px] lg:pb-[80px]">
-            {Array.from({ length: 6 }).map((_, index) => {
-                const room = filteredRooms[index];
-                return room ? (
-                <RoomCard
-                    key={room.id}
-                    image={room.image}
-                    title={room.title[locale]}
-                    features={room.features[locale]}
+            {selectedRoom && (
+                <CardModal
+                    open={open}
+                    onOpenChange={setOpen}
+                    card={mapRoomToCardData(selectedRoom, locale)}
                 />
-                ) : (
-                <div key={index} className="bg-gray-100 rounded-[4px]" />
-                );
-            })}
-        </div>
-      </div>
-    </section>
-  );
-}
+            )}
+        </section>
+    );
+};
 
 export default RoomScreen;

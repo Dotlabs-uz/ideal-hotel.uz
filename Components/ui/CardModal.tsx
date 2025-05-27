@@ -59,7 +59,7 @@ const CardModal = ({ open, onOpenChange, card }: CardModalProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       {/* <DialogContent className="!bg-white !w-screen !max-w-none lg:h-screen rounded-none p-[20px] lg:p-[60px] flex flex-col overflow-y-auto"> */}
-      <DialogContent className="!bg-white w-screen lg:!w-[90%] !max-w-none h-fit rounded-none p-[20px] lg:p-[60px] flex flex-col overflow-y-auto">
+      <DialogContent className="!bg-white w-screen lg:!w-[90%] !max-w-none h-fit rounded-none p-[20px] lg:p-[60px] flex flex-col overflow-y-auto [button[data-dialog-close]]:hidden">
         <button
           onClick={() => onOpenChange(false)}
           className="absolute top-6 right-6 hover:opacity-70 z-30 bg-white/20 rounded-full"
@@ -67,7 +67,8 @@ const CardModal = ({ open, onOpenChange, card }: CardModalProps) => {
           <Image src="/images/icon/exit.png" alt="Previous" width={42} height={42} className="w-[24px] md:w-[34px] lg:w-[42px]" />
         </button>
 
-        <div className="flex flex-col md:flex-row lg:flex-row gap-4 sm:gap-5 lg:gap-10 overflow-y-auto">
+        <div className="">
+            <div className="flex flex-col md:flex-row lg:flex-row gap-4 sm:gap-5 lg:gap-10 overflow-y-auto">
           <div className="flex flex-col lg:w-1/2 h-fit space-y-4">
             <div className="relative aspect-video overflow-hidden rounded-[4px]">
               <img
@@ -104,7 +105,7 @@ const CardModal = ({ open, onOpenChange, card }: CardModalProps) => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 space-y-6">
+          <div className="lg:w-1/2 space-y-6 h-fit">
               <DialogHeader>
                 <DialogTitle className="text-[36px] md:text-[48px] text-left lg:text-[64px] leading-15 text-[#00748E]">
                     {card.title}
@@ -119,7 +120,7 @@ const CardModal = ({ open, onOpenChange, card }: CardModalProps) => {
               Book Now
             </button>
 
-            <div className="">
+            <div className="hidden lg:block">
                 <h3 className="text-[18px] md:text-[21px] lg:text-[24px] text-[#00748E]">Удобства В Номере</h3>
                 <div className="grid grid-cols-2 gap-2 mt-2 text-[12px] md:text-[14px] lg:text-[16px]">
                     <ul className="list-disc list-inside space-y-1">
@@ -134,7 +135,24 @@ const CardModal = ({ open, onOpenChange, card }: CardModalProps) => {
                     </ul>
                 </div>
             </div>
+
           </div>
+        </div>
+            <div className="lg:hidden">
+                <h3 className="text-[18px] md:text-[21px] lg:text-[24px] text-[#00748E]">Удобства В Номере</h3>
+                <div className="grid grid-cols-2 gap-2 mt-2 text-[12px] md:text-[14px] lg:text-[16px]">
+                    <ul className="list-disc list-inside space-y-1">
+                    {card.amenities.map((item, idx) => (
+                        <li key={`amenity-${idx}`}>{item}</li>
+                    ))}
+                    </ul>
+                    <ul className="list-disc list-inside space-y-1">
+                    {card.amenities2.map((item, idx) => (
+                        <li key={`amenity2-${idx}`}>{item}</li>
+                    ))}
+                    </ul>
+                </div>
+            </div>
         </div>
       </DialogContent>
     </Dialog>

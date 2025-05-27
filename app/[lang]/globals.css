@@ -9,6 +9,14 @@
   /* outline: 1px solid red; */
 }
 
+@font-face {
+  font-family: 'TRIAL Oceanic';
+  src: url('/fonts/TRIAL-Oceanic/TRIAL_Oceanic-Bold-BF6487cfe5cfe3d.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
  @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

@@ -48,7 +48,7 @@ const LanguageSwitcher = ({ currentLang }: LanguageSwitcherProps) => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-28 bg-black/90 rounded shadow-lg py-1 z-50">
+        <div className="absolute left-0 mt-2 w-28 bg-black/90 rounded shadow-lg py-1 z-50">
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
