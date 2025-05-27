@@ -2,7 +2,7 @@
 
 const ContactMap = () => {
   return (
-    <section className="relative w-full h-[600px]">
+    <section className="relative h-[350px] lg:h-[600px]">
       {/* Карта */}
       <iframe
         className="w-full h-full"

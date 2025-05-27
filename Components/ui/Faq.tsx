@@ -13,7 +13,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-[20px] lg:py-16">
+    <section className="px-4 py-[20px] lg:py-16">
       <div className="text-center mb-12">
         <p className="text-[#17849A] text-lg sm:text-xl mb-2">У вас трудности?</p>
         <h2 className="text-[#17849A] text-3xl sm:text-4xl font-bold">Частые вопросы</h2>

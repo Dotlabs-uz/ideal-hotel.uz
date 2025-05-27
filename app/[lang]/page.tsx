@@ -21,15 +21,17 @@ export default async function Home({params}:{params:Params}) {
   
 
   return (
-      <div className="">
+    <>
 				<Banner translation={translation} />
-        <RoomFund translation={translation} />
-        <GalleryTabs translation={translation} lang={lang} />
-        <Advantages translation={translation} />
-        <Map translation={translation}/>
-        <GuestReviews />
-        <FAQ />
-        <ContactMap />
-      </div>
+        <div className="max-w-[1200px] mx-auto">
+          <RoomFund translation={translation} />
+          <GalleryTabs translation={translation} lang={lang} />
+          <Advantages translation={translation} />
+          <Map translation={translation}/>
+          <GuestReviews />
+          <FAQ />
+          <ContactMap />
+        </div>
+    </>
   );
 }

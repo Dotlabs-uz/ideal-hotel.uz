@@ -24,7 +24,7 @@ export default function GuestReviews() {
   });
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
+    <section className="px-4 py-16">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-[#17849A] text-3xl font-bold">Отзывы гостей</h2>
         <div className="flex gap-2">
