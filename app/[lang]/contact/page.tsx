@@ -19,7 +19,7 @@ export default async function Contact({params}:{params:Params}) {
           <HeroRooms translation={translation.contact}/>
           <ContactsLink lang={lang} />
           <ContactMid translation={translation}/>
-          <FAQ />
+          <FAQ translation={translation} />
           <ContactMap translation={translation} />
         </div>
   );
