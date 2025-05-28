@@ -11,10 +11,10 @@
         "animationTxt": "Every moment feels like the first time in paradise view"
     },
     "advantages": {
-        "services": "Удобства и услуги",
-        "advantages": "Преимущества",
-        "btnTxt": "Ознакомиться с услугами",
-        "txt": "Для вашего удобства на территории комплекса есть много дополнительных услуг"
+        "services": "Facilities and Services",
+        "advantages": "Advantages",
+        "btnTxt": "View Services",
+        "txt": "For your convenience, there are many additional services available in the complex"
     },
     "numberFond": {
         "numberFond": "Room Inventory",
@@ -66,5 +66,22 @@
         "about": "About",
         "workingDays": "Monday to Friday: 9:00 AM – 6:00 PM",
         "bookNow": "Book Now"
+    },
+    "contactsMap": {
+        "contact": "Contacts",
+        "route": "Get directions"
+    },
+    "guide": {
+        "guide": "Guide",
+        "places": "Places Map",
+        "txt": "For your convenience, there are many additional services available in the complex",
+        "btn": "Open map"
+    },
+    "guest": {
+        "reviews": "Guest Reviews"
+    },
+    "faq": {
+        "faq": "Having trouble?",
+        "question": "Frequently Asked Questions"
     }
 }

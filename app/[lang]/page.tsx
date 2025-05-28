@@ -28,9 +28,9 @@ export default async function Home({params}:{params:Params}) {
           <GalleryTabs translation={translation} lang={lang} />
           <Advantages translation={translation} />
           <Map translation={translation}/>
-          <GuestReviews />
-          <FAQ />
-          <ContactMap />
+          <GuestReviews translation={translation} />
+          <FAQ translation={translation} />
+          <ContactMap translation={translation}  />
         </div>
     </>
   );

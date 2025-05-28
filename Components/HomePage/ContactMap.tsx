@@ -1,6 +1,15 @@
 'use client';
 
-const ContactMap = () => {
+interface Props {
+  translation: {
+    contactsMap: {
+      contact: string,
+      route: string
+    }
+  };
+}
+
+const ContactMap = ({ translation }: Props) => {
   return (
     <section className="relative h-[350px] lg:h-[600px]">
       {/* Карта */}
@@ -14,7 +23,7 @@ const ContactMap = () => {
       {/* Блок с контактами */}
       <div className="w-[1200px] mx-auto bg-amber-200">
         <div className="absolute top-10 left-10 bg-[#02798C] text-white p-6 rounded-lg shadow-lg max-w-[300px] w-full">
-            <h3 className="text-sm mb-2">Контакты</h3>
+            <h3 className="text-sm mb-2">{translation.contactsMap.contact}</h3>
             <p className="text-lg font-semibold leading-tight">
             Samarkand st. <br /> Mirzo-Ulugbek 52
             </p>
@@ -26,7 +35,7 @@ const ContactMap = () => {
             <p className="mt-3 text-base">info@idealhotel.uz</p>
 
             <button className="mt-6 w-full py-2 border border-white rounded text-white hover:bg-white hover:text-[#02798C] transition duration-200">
-            Проложить маршрут
+              {translation.contactsMap.route}
             </button>
         </div>
       </div>

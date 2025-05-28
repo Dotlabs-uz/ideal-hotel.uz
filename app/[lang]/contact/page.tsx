@@ -20,7 +20,7 @@ export default async function Contact({params}:{params:Params}) {
           <ContactsLink lang={lang} />
           <ContactMid translation={translation}/>
           <FAQ />
-          <ContactMap />
+          <ContactMap translation={translation} />
         </div>
   );
 }

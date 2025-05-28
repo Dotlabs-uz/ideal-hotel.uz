@@ -6,7 +6,15 @@ import { useRef } from 'react';
 import reviews from '@/lib/data/reviews.json';
 import Image from 'next/image';
 
-export default function GuestReviews() {
+interface Props {
+  translation: {
+    guest: {
+        reviews: string
+    }
+  };
+}
+
+export default function GuestReviews({ translation }: Props) {
   const sliderRef = useRef(null);
   const [sliderInstanceRef, slider] = useKeenSlider<HTMLDivElement>({
     slides: {
@@ -26,7 +34,7 @@ export default function GuestReviews() {
   return (
     <section className="px-4 py-16">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-[#17849A] text-3xl font-bold">Отзывы гостей</h2>
+        <h2 className="text-[#17849A] text-3xl font-bold">{translation.guest.reviews}</h2>
         <div className="flex gap-2">
           <button
             onClick={() => slider.current?.prev()}
