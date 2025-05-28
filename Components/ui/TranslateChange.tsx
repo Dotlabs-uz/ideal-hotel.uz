@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { FaGlobe } from "react-icons/fa";
+
 
 const LANGUAGES = [
   { code: "ru", label: "РУС" },
@@ -43,12 +45,13 @@ const LanguageSwitcher = ({ currentLang }: LanguageSwitcherProps) => {
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
-        <span>🌐 {currentLang.toUpperCase()}</span>
+        <FaGlobe size={20} className="text-white" />
+        <span>{currentLang.toUpperCase()}</span>
         <span className="text-xs">▼</span>
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-28 bg-black/90 rounded shadow-lg py-1 z-50">
+        <div className="absolute left-0 mt-2 w-28 bg-black/60 rounded shadow-lg py-1 z-50">
           {LANGUAGES.map(({ code, label }) => (
             <div
               key={code}
