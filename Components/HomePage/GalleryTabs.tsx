@@ -71,7 +71,7 @@ const GalleryTabs = ({
   const filteredImages = images.filter(img => img.category === activeCategory);
 
   return (
-    <div className="pt-[80px] px-6">
+    <div className=" lg:pt-[80px] px-6">
       {/* max-w-[1100px] px-5 mt-[30px] md:mt-[50px] lg:mt-[80px] lg:px-0 mx-auto */}
         <div className="flex text-center gap-0 md:gap-5 sm:text-left lg:gap-[20px] flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap mb-[20px] md:mb-[30px] lg:mb-[50px]">
             <h2 className="w-full sm:w-fit  text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">

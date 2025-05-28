@@ -61,7 +61,7 @@ const RoomFund = ({ translation }: numberFond) => {
     const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
 
   return (
-    <section className="pt-[80px] px-6">
+    <section className="pt-[20px] lg:pt-[80px] px-6">
       <div>
         <div className="flex lg:justify-between flex-wrap sm:flex-wrap md:flex-wrap items-start gap-0 md:gap-[10px] lg:gap-0 ">
             <h2 className="lg:block text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">

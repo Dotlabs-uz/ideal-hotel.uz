@@ -22,7 +22,7 @@ const FAQ = ({ translation }: Props) => {
   };
 
   return (
-    <section className="px-4 py-[20px] lg:py-16">
+    <section className="px-4 py-[0px] lg:py-16">
       <div className="text-center mb-12">
         <p className="text-[#17849A] text-lg sm:text-xl mb-2">{translation.faq.faq}</p>
         <h2 className="text-[#17849A] text-3xl sm:text-4xl font-bold">{translation.faq.question}</h2>

@@ -1,4 +1,7 @@
-import BannerAnim from "./BannerAnim";
+'use client';
+
+import { motion } from 'framer-motion';
+import BannerAnim from './BannerAnim';
 
 type BannerProps = {
   translation: {
@@ -17,13 +20,40 @@ const Banner = ({ translation }: BannerProps) => {
       style={{ backgroundImage: "url('/BannerImages/receptionTop.png')" }}
     >
       <div className="relative h-full max-w-[1200px] w-full flex justify-between items-center mx-auto">
-        <div className="absolute bottom-0 right-[20px]">
+        
+        <motion.div
+          className="z-20"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <motion.p
+            className="text-[14px] md:text-[16px] lg:text-[20px]"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            {translation.banner.welcome}
+          </motion.p>
+
+          <motion.h1
+            className="w-[310px] md:w-[600px] lg:w-fit text-[48px] md:text-[80px] lg:text-[135px] font-bold leading-12 md:leading-20 lg:leading-32"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            {translation.banner.bannerTxt}
+          </motion.h1>
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-0 right-[20px]"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
           <BannerAnim translation={translation} />
-        </div>
-        <div className="z-20">
-          <p className="text-[14px] md:text-[16px] lg:text-[20px]">{translation.banner.welcome}</p> 
-          <h1 className="w-[310px] md:w-[600px] lg:w-fit text-[48px] md:text-[80px] lg:text-[135px]  font-bold leading-12 md:leading-20 lg:leading-32">{translation.banner.bannerTxt}</h1> 
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ interface Advantages {
 const Advantages = ({ translation }: Advantages) => {
 
   return (
-    <section className="pt-[30px] md:pt-[50px] lg:pt-[80px] px-6">
+    <section className="pt-[0px] md:pt-[50px] lg:pt-[80px] px-6">
       <div>
         <div className="flex lg:justify-between flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap items-start gap-0 md:gap-x-[30px] lg:gap-1 ">
             <div className="flex gap-[20px] flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap">
