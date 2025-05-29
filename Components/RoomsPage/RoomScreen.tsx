@@ -59,15 +59,15 @@ const RoomScreen = ({ translation }: numberFond) => {
     const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
 
     return (
-        <section className="max-w-6xl mx-auto pt-[80px] px-6">
+        <section className="max-w-[12660px] mx-auto mb-[50px] pt-[10px] lg:pt-[80px] px-6">
             <div>
-                <div className="flex lg:justify-between flex-wrap items-start gap-0 md:gap-[10px] lg:gap-0 ">
-                    <div className="flex w-full justify-center flex-wrap gap-1 lg:gap-4 mb-[15px] lg:mb-12">
+                <div className="">
+                    <div className="flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
                         {categories.map((category) => (
                             <button
                                 key={category.id}
                                 onClick={() => handleClick(category.id)}
-                                className={`text-[8px] sm:text-[12px] md:text-[14px] lg:text-[16px] px-6 py-2 rounded-[4px] mt-[26px] transition-colors ${
+                                className={`text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-[100%] py-2 rounded-[4px] mt-[26px] transition-colors ${
                                     activeCategory === category.id
                                         ? 'bg-[#17849A] text-white'
                                         : 'bg-white text-[#17849A] border border-gray-200 hover:bg-gray-50'
