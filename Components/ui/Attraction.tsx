@@ -9,7 +9,7 @@ const Attractions = () => {
 
   return (
     <section className="max-full mx-auto py-12">
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto pb-[10px]">
         <div className="flex gap-5 flex-nowrap">
           {attractions.map((item) => (
             <div

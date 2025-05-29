@@ -116,7 +116,7 @@ const RoomFund = ({ translation }: numberFond) => {
                 );
             })}
         </div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto pb-[10px]">
              <div className="lg:hidden flex gap-6 w-max">
                  {filteredRooms.map((room) => (
                  <div key={room.id} className="min-w-[180px] lg:min-w-[300px]">

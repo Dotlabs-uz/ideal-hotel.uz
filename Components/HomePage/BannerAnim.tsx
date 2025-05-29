@@ -14,8 +14,8 @@ interface BannerProps {
 
 const BannerAnim = ({ translation }: BannerProps) => {
   return (
-    <div className="w-[250px] md:w-[300px] lg:w-[500px] h-[250px] md:h-[300px] lg:h-[500px] bg-[#AFB0B2]">
-        <div className="relative w-[250px] md:w-[270px] lg:w-[450px] h-[250px] md:h-[300px] lg:h-[500px] bg-[#0D96A6] overflow-hidden flex items-center justify-between bg-cover bg-center pl-5 md:pl-8 lg:pl-12" 
+    <div className="w-[250px] md:w-[300px] lg:w-[500px] h-[250px] md:h-[300px] lg:h-[500px] bg-[#AFB0B2] rounded-2xl">
+        <div className="relative w-[250px] md:w-[270px] lg:w-[450px] h-[250px] md:h-[300px] lg:h-[500px] rounded-r-2xl bg-[#0D96A6] overflow-hidden flex items-center justify-between bg-cover bg-center pl-5 md:pl-8 lg:pl-12" 
         style={{ backgroundImage: "url('/BannerImages/ten.png')" }}>
 
         <div className="text-white z-10 w-[120px] md:w-[150px] lg:w-[200px]">
@@ -58,21 +58,17 @@ const BannerAnim = ({ translation }: BannerProps) => {
         </div>
 
 
-          <div className="absolute bottom-0 left-0">
+          <div className="absolute bottom-0 left-0 w-[45vw] sm:w-[30vw] md:w-[25vw] lg:w-[350px]">
             <svg
-              width="200"
-              height="200"
-              viewBox="0 0 200 200"
-              fill="none"
+              viewBox="0 0 200 125"
+              preserveAspectRatio="xMinYMin meet"
+              className="w-full h-auto"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <line x1="0" y1="50" x2="150" y2="50" stroke="white" stroke-width="1" />
-
-              <line x1="150" y1="50" x2="150" y2="150" stroke="white" stroke-width="1" />
-
-              <circle cx="150" cy="50" r="20" stroke="white" stroke-width="1" fill="none" />
+              <line x1="0" y1="50" x2="150" y2="50" stroke="white" strokeWidth="1" />
+              <line x1="150" y1="50" x2="150" y2="150" stroke="white" strokeWidth="1" />
+              <circle cx="150" cy="50" r="20" stroke="white" strokeWidth="1" fill="none" />
             </svg>
-
           </div>
         </div>
     </div>

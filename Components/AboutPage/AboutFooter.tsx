@@ -19,12 +19,12 @@ const images = [
 
 const AboutFooter = ({ translation }: BannerProps) => {
   return (
-    <div className="flex flex-col items-center mt-[10px] lg:mt-[47px]">
-            <div className="text-center my-[20px] md:my-[35px] lg:my-[50px]">
-                <h2 className="text-[#17849A] text-[26px] md:text-[32px] lg:text-[38px] leading-10 w-[300px] md:w-[350px] lg:w-[450px] font-medium mx-auto">
+    <div className="flex flex-col items-center mt-[10px]">
+            <div className="my-[20px] md:my-[35px] lg:my-[50px]">
+                <h2 className="text-[#17849A] text-[26px] md:text-[32px] lg:text-[38px] leading-10 max-w-[80%] font-medium mx-auto">
                 {translation.about.Impression}
                 </h2>
-                <p className="text-[#534B4F] text-[14px] md:text-[16px] lg:text-[18px] w-[300px] md:w-[350px] lg:w-[450px] mt-2 lg:mt-4 mx-auto">
+                <p className="text-[#534B4F] text-[14px] md:text-[16px] lg:text-[18px] max-w-[80%] mt-2 lg:mt-4 mx-auto">
                 {translation.about.impTxt}
                 </p>
             </div>
