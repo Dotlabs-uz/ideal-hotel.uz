@@ -19,7 +19,6 @@ export default async function Home({ params }: { params: Params }) {
   return (
     <>
       <Banner translation={translation} />
-
       <div className="max-w-[1200px] mx-auto space-y-16">
         <Reveal direction="bottom">
           <RoomFund translation={translation} />

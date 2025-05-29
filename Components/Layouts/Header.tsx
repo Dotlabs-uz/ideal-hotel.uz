@@ -1,12 +1,14 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link"; // ← Импортируем Link
+import Link from "next/link";
 import type { Locale } from "@/i18n.config";
 import LanguageSwitcher from "../ui/TranslateChange";
 import { motion, AnimatePresence } from "framer-motion";
+import MarqueeBanner from "../ui/Marquee";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   lang: Locale;
@@ -15,6 +17,31 @@ interface HeaderProps {
 
 const Header = ({ lang, translation }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === `/${lang}`;
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("scroll", handleScroll, true);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll, true);
+    };
+  }, [isOpen]);
 
   return (
     <header className="fixed top-0 left-0 md:px-0 w-full backdrop-blur-md bg-black/60 text-white z-50">
@@ -58,6 +85,7 @@ const Header = ({ lang, translation }: HeaderProps) => {
       <AnimatePresence>
   {isOpen && (
     <motion.div
+      ref={menuRef}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -100, opacity: 0 }}
@@ -83,7 +111,8 @@ const Header = ({ lang, translation }: HeaderProps) => {
       </nav>
     </motion.div>
   )}
-</AnimatePresence>
+  </AnimatePresence>
+  {isHomePage && <MarqueeBanner translation={translation} />}
     </header>
   );
 };

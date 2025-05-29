@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { FaGlobe } from "react-icons/fa";
 
@@ -20,25 +20,45 @@ const LanguageSwitcher = ({ currentLang }: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const changeLanguage = (newLang: string) => {
-    // Разбиваем путь на сегменты
-    const segments = pathname.split("/").filter(Boolean); // убираем пустые
+  const switcherRef = useRef<HTMLDivElement>(null);
 
-    // Если первый сегмент - это код языка, заменяем его, иначе добавляем
+  const changeLanguage = (newLang: string) => {
+    const segments = pathname.split("/").filter(Boolean);
     if (LANGUAGES.some(lang => lang.code === segments[0])) {
       segments[0] = newLang;
     } else {
       segments.unshift(newLang);
     }
-
     const newPath = "/" + segments.join("/");
-
     router.push(newPath);
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (switcherRef.current && !switcherRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("scroll", handleScroll, true);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll, true);
+    };
+  }, [isOpen]);
+
+
   return (
-    <div className="relative inline-block text-left">
+    <div ref={switcherRef} className="relative inline-block text-left">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1 cursor-pointer select-none text-white"
