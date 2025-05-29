@@ -14,9 +14,9 @@ export default async function About({params}:{params:Params}) {
 
     return (
         <>
-                <div className="lg:h-[1050px]">
-                    <AboutBanner translation={translation} />
-                </div>
+            <div className="lg:h-[1050px]">
+                <AboutBanner translation={translation} />
+            </div>
             <div className="max-w-[1260px] mx-auto">
                 <GalleryTabs lang={lang} translation={translation}  />
                 <AboutFooter translation={translation} />

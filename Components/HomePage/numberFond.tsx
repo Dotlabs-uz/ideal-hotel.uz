@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '../ui/dialog';
 import CardModal from '../ui/CardModal';
 import { mapRoomToCardData } from '@/lib/mapRoomToCardData';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type RoomCategory = 'all' | 'standart' | 'deluxe' | 'lux';
 
@@ -75,21 +76,35 @@ const RoomFund = ({ translation }: numberFond) => {
                     {translation.numberFond.enjoyTxt}
                 </p>
 
-                <div className="flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
-                    {categories.map((category) => (
-                    <button
-                        key={category.id}
-                        onClick={() => handleClick(category.id)}
-                        className={`text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-[100%] py-2 rounded-[4px] mt-[26px] transition-colors ${
-                        activeCategory === category.id
-                            ? 'bg-[#17849A] text-white'
-                            : 'bg-white text-[#17849A] border border-gray-200 hover:bg-gray-50'
-                        }`}
-                    >
-                        {category.name}
-                    </button>
-                    ))}
+                <div className="relative flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
+                    {categories.map((category) => {
+                        const isActive = activeCategory === category.id;
+                        return (
+                        <button
+                            key={category.id}
+                            onClick={() => handleClick(category.id)}
+                            className={`relative text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-full py-2 px-4 rounded-[4px] mt-[26px] transition-colors z-10 ${
+                            isActive
+                                ? 'text-white'
+                                : 'text-[#17849A] border border-gray-200 hover:bg-gray-50'
+                            }`}
+                            style={{
+                            backgroundColor: isActive ? 'transparent' : 'white',
+                            }}
+                        >
+                            {isActive && (
+                            <motion.div
+                                layoutId="categoryHighlight"
+                                className="absolute inset-0 z-[-1] rounded-[4px] bg-[#17849A]"
+                                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                            />
+                            )}
+                            {category.name}
+                        </button>
+                        );
+                    })}
                 </div>
+
             </div>
             <div className="hidden lg:block text-center">
                 <Link
@@ -100,21 +115,30 @@ const RoomFund = ({ translation }: numberFond) => {
                 </Link>
             </div>
         </div>
-        <div className="hidden lg:grid grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, index) => {
+       <div className="hidden lg:grid grid-cols-3 gap-6">
+            <AnimatePresence mode="wait">
+                {Array.from({ length: 6 }).map((_, index) => {
                 const room = filteredRooms[index];
                 return room ? (
-                <RoomCard
+                    <motion.div
                     key={room.id}
-                    image={room.image}
-                    title={room.title[locale]}
-                    features={room.features[locale]}
-                    onClick={() => handleOpenRoom(room)}
-                />
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    >
+                    <RoomCard
+                        image={room.image}
+                        title={room.title[locale]}
+                        features={room.features[locale]}
+                        onClick={() => handleOpenRoom(room)}
+                    />
+                    </motion.div>
                 ) : (
-                <div key={index} className="bg-gray-100 rounded-[4px]" />
+                    <div key={index} className="bg-gray-100 rounded-[4px]" />
                 );
-            })}
+                })}
+            </AnimatePresence>
         </div>
         <div className="overflow-x-auto pb-[10px]">
              <div className="lg:hidden flex gap-6 w-max">

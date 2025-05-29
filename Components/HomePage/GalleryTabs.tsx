@@ -2,6 +2,7 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import clsx from 'clsx';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = [
   {
@@ -72,7 +73,6 @@ const GalleryTabs = ({
 
   return (
     <div className=" lg:pt-[80px] px-6">
-      {/* max-w-[1100px] px-5 mt-[30px] md:mt-[50px] lg:mt-[80px] lg:px-0 mx-auto */}
         <div className="flex text-center gap-0 md:gap-5 sm:text-left lg:gap-[20px] flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap mb-[20px] md:mb-[30px] lg:mb-[50px]">
             <h2 className="w-full sm:w-fit  text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">
                 {translation.services.servic}
@@ -86,35 +86,53 @@ const GalleryTabs = ({
                 </p>
             </div>
         </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4">
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            onClick={() => handleClick(category.id)}
-            className={clsx(
-              'px-6 py-2 max-w-[275px] rounded-[4px] transition text-[12px] md:text-[14px] lg:text-[18px]',
-              activeCategory === category.id
-                ? 'bg-[#007b7f] text-white'
-                : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-            )}
-          >
-            {category.label[lang]}
-          </button>
-        ))}
+        <div className="relative grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {categories.map(category => {
+            const isActive = activeCategory === category.id;
+            return (
+              <button
+                key={category.id}
+                onClick={() => handleClick(category.id)}
+                className={clsx(
+                  'relative px-6 py-2 max-w-[275px] rounded-[4px] text-[12px] md:text-[14px] lg:text-[18px] transition-colors',
+                  isActive ? 'text-white' : 'text-gray-800'
+                )}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="tab-indicator"
+                    className="absolute inset-0 bg-[#007b7f] rounded-[4px] z-[-1]"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+                {category.label[lang]}
+              </button>
+            );
+          })}
+        </div>
+
+      <div className="relative w-full h-[500px]">
+        <AnimatePresence mode="wait">
+          {filteredImages.map((image) => (
+            <motion.div
+              key={activeCategory} 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover rounded-[4px]"
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
 
-      <div className="">
-        {filteredImages.map((image) => (
-          <div key={image.id} className="relative w-full h-[500px]">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover rounded-[4px]"
-            />
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

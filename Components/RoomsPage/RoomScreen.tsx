@@ -1,6 +1,8 @@
 'use client'
+
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { useMemo, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import rooms from '@/lib/data/Room.json';
 import RoomCard from '../ui/CardRoom';
 import CardModal from '../ui/CardModal';
@@ -11,99 +13,111 @@ type RoomCategory = 'all' | 'standart' | 'deluxe' | 'lux';
 interface numberFond {
   translation: {
     numberFond: {
-        numberFond: string;
-        enjoyTxt: string;
-        seeAll: string;
-        all: string;
-        standart: string;
-        deluxe: string;
-        lux: string;
+      numberFond: string;
+      enjoyTxt: string;
+      seeAll: string;
+      all: string;
+      standart: string;
+      deluxe: string;
+      lux: string;
     };
   };
 }
 
 const RoomScreen = ({ translation }: numberFond) => {
-    const [selectedRoom, setSelectedRoom] = useState<typeof rooms[0] | null>(null);
-    const [open, setOpen] = useState(false);
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    const pathname = usePathname();
+  const [selectedRoom, setSelectedRoom] = useState<typeof rooms[0] | null>(null);
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-    const categories: { id: RoomCategory; name: string }[] = [
-        { id: 'all', name: translation.numberFond.all || 'Все' },
-        { id: 'standart', name: translation.numberFond.standart || 'Standart' },
-        { id: 'deluxe', name: translation.numberFond.deluxe || 'Deluxe' },
-        { id: 'lux', name: translation.numberFond.lux || 'Lux' },
-    ];
+  const categories: { id: RoomCategory; name: string }[] = [
+    { id: 'all', name: translation.numberFond.all || 'Все' },
+    { id: 'standart', name: translation.numberFond.standart || 'Standart' },
+    { id: 'deluxe', name: translation.numberFond.deluxe || 'Deluxe' },
+    { id: 'lux', name: translation.numberFond.lux || 'Lux' },
+  ];
 
-    const activeCategory = useMemo(() => {
-        return (searchParams.get('category') as RoomCategory) || 'all';
-    }, [searchParams]);
+  const activeCategory = useMemo(() => {
+    return (searchParams.get('category') as RoomCategory) || 'all';
+  }, [searchParams]);
 
-    const handleClick = (category: RoomCategory) => {
-        const params = new URLSearchParams(searchParams);
-        params.set('category', category);
-        router.push(`?${params.toString()}`, { scroll: false });
-    };
+  const handleClick = (category: RoomCategory) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('category', category);
+    router.push(`?${params.toString()}`, { scroll: false });
+  };
 
-    const handleOpenRoom = (room: typeof rooms[0]) => {
-        setSelectedRoom(room);
-        setOpen(true);
-    };
+  const handleOpenRoom = (room: typeof rooms[0]) => {
+    setSelectedRoom(room);
+    setOpen(true);
+  };
 
-    const filteredRooms = rooms.filter(room =>
-        activeCategory === 'all' ? true : room.category === activeCategory
-    );
+  const filteredRooms = rooms.filter(room =>
+    activeCategory === 'all' ? true : room.category === activeCategory
+  );
 
-    const segments = pathname.split('/');
-    const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
+  const segments = pathname.split('/');
+  const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
 
-    return (
-        <section className="max-w-[12660px] mx-auto mb-[50px] pt-[10px] lg:pt-[80px] px-6">
-            <div>
-                <div className="">
-                    <div className="flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
-                        {categories.map((category) => (
-                            <button
-                                key={category.id}
-                                onClick={() => handleClick(category.id)}
-                                className={`text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-[100%] py-2 rounded-[4px] mt-[26px] transition-colors ${
-                                    activeCategory === category.id
-                                        ? 'bg-[#17849A] text-white'
-                                        : 'bg-white text-[#17849A] border border-gray-200 hover:bg-gray-50'
-                                }`}
-                            >
-                                {category.name}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pb-[20px] md:pb-[50px] lg:pb-[80px]">
-                    {Array.from({ length: 6 }).map((_, index) => {
-                        const room = filteredRooms[index];
-                        return room ? (
-                            <RoomCard
-                                key={room.id}
-                                image={room.image}
-                                title={room.title[locale]}
-                                features={room.features[locale]}
-                                onClick={() => handleOpenRoom(room)}
-                            />
-                        ) : (
-                            <div key={index} className="bg-gray-100 rounded-[4px]" />
-                        );
-                    })}
-                </div>
+  return (
+    <section className="max-w-[12660px] mx-auto mb-[50px] pt-[10px] lg:pt-[80px] px-6">
+      <div>
+        <div className="flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12 relative border-b border-gray-200">
+          <ul className="flex w-full list-none p-0 m-0 font-medium text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px]">
+            {categories.map((category) => (
+              <motion.li
+                key={category.id}
+                className={`relative cursor-pointer w-full text-center py-2 transition-colors ${
+                  activeCategory === category.id
+                    ? 'text-[#17849A]'
+                    : 'text-gray-500 hover:text-[#17849A]'
+                }`}
+                onClick={() => handleClick(category.id)}
+              >
+                {category.name}
+                {activeCategory === category.id && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-[#17849A] rounded"
+                  />
+                )}
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+
+        <AnimatePresence mode="wait">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pb-[20px] md:pb-[50px] lg:pb-[80px]">
+                {filteredRooms.slice(0, 6).map((room) => (
+                <motion.div
+                    key={room.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <RoomCard
+                    image={room.image}
+                    title={room.title[locale]}
+                    features={room.features[locale]}
+                    onClick={() => handleOpenRoom(room)}
+                    />
+                </motion.div>
+                ))}
             </div>
-            {selectedRoom && (
-                <CardModal
-                    open={open}
-                    onOpenChange={setOpen}
-                    card={mapRoomToCardData(selectedRoom, locale)}
-                />
-            )}
-        </section>
-    );
+        </AnimatePresence>
+      </div>
+
+      {selectedRoom && (
+        <CardModal
+          open={open}
+          onOpenChange={setOpen}
+          card={mapRoomToCardData(selectedRoom, locale)}
+        />
+      )}
+    </section>
+  );
 };
 
 export default RoomScreen;

@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./dialog";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Locale = 'ru' | 'uz' | 'en';
 
@@ -58,7 +59,6 @@ const CardModal = ({ open, onOpenChange, card }: CardModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      {/* <DialogContent className="!bg-white !w-screen !max-w-none lg:h-screen rounded-none p-[20px] lg:p-[60px] flex flex-col overflow-y-auto"> */}
       <DialogContent className="!bg-white w-screen lg:!w-[90%] !max-w-none h-fit rounded-none p-[20px] lg:p-[60px] flex flex-col overflow-y-auto [button[data-dialog-close]]:hidden">
         <button
           onClick={() => onOpenChange(false)}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import LanguageSwitcher from "../ui/TranslateChange";
 import { motion, AnimatePresence } from "framer-motion";
 import MarqueeBanner from "../ui/Marquee";
 import { usePathname } from "next/navigation";
+import MenuMob from "../ui/Menu";
 
 interface HeaderProps {
   lang: Locale;
@@ -19,32 +20,9 @@ const Header = ({ lang, translation }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === `/${lang}`;
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    const handleScroll = () => {
-      setIsOpen(false);
-    };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      window.addEventListener("scroll", handleScroll, true);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      window.removeEventListener("scroll", handleScroll, true);
-    };
-  }, [isOpen]);
 
   return (
-    <header className="fixed top-0 left-0 md:px-0 w-full backdrop-blur-md bg-black/60 text-white z-50">
+    <header className="fixed top-0 left-0 md:px-0 w-full backdrop-blur-md bg-black/60 text-white z-40">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -83,36 +61,16 @@ const Header = ({ lang, translation }: HeaderProps) => {
       </div>
 
       <AnimatePresence>
-  {isOpen && (
-    <motion.div
-      ref={menuRef}
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -100, opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur rounded-bl-[20px] rounded-br-[20px] px-4 pb-4 z-40"
-    >
-      <nav className="flex flex-col gap-4 p-[20px]">
-        <Link href={`/${lang}/rooms`} className="hover:underline">
-          {translation.Header.Numbers}
-        </Link>
-        <Link href={`/${lang}/about`} className="hover:underline">
-          {translation.Header.About}
-        </Link>
-        <Link href={`/${lang}/contact`} className="hover:underline">
-          {translation.Header.Contacts}
-        </Link>
-        <div className="flex items-center gap-2 mt-2">
-          <LanguageSwitcher currentLang={lang} />
-        </div>
-        <button className="px-4 w-full py-2 border border-white text-white bg-[#17849A] hover:bg-white hover:text-black rounded">
-          {translation.Header.Book}
-        </button>
-      </nav>
-    </motion.div>
-  )}
-  </AnimatePresence>
-  {isHomePage && <MarqueeBanner translation={translation} />}
+        {isOpen && (
+                <MenuMob
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                  lang={lang}
+                  translation={translation}
+                />
+        )}
+      </AnimatePresence>
+    {isHomePage && <MarqueeBanner translation={translation} />}
     </header>
   );
 };
