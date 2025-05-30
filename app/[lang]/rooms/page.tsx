@@ -16,9 +16,11 @@ export default async function Rooms({params}:{params:Params}) {
   
 
   return (
-        <div className="">
+        <>
           <HeroRooms translation={translation.fondBanners}/>
-          <RoomScreen translation={translation}/>
-        </div>
+          <div className="max-w-[1260px] mx-auto">
+            <RoomScreen translation={translation}/>
+          </div>
+        </>
   );
 }

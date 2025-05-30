@@ -6,7 +6,7 @@ import { getDictionary } from "@/lib/dictionary";
 
 type Params = Promise<{ lang: Locale }>
 
-export default async function About({params}:{params:Params}) {
+export default async function about({params}:{params:Params}) {
 	
     const { lang } = await params
 
