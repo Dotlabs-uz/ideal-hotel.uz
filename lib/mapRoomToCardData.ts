@@ -6,8 +6,9 @@ export function mapRoomToCardData(room: any, locale: "ru" | "uz" | "en") {
     image: room.image,
     images: room.gallery,
     features: room.features[locale],
-    amenities: room.amenities,
-    amenities2: room.amenities2,
+    amenities: room.amenities[locale],
+    amenities2: room.amenities2[locale],
     thumbnails: room.thumbnails,
+    underCategories: room.underCategories,
   };
 }

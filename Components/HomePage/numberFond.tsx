@@ -9,7 +9,7 @@ import CardModal from '../ui/CardModal';
 import { mapRoomToCardData } from '@/lib/mapRoomToCardData';
 import { motion, AnimatePresence } from 'framer-motion';
 
-type RoomCategory = 'all' | 'standart' | 'deluxe' | 'lux';
+type RoomCategory = 'all' | 'standard' | 'superior' | 'junior' | 'quadruple';
 
 interface numberFond {
   translation: {
@@ -18,9 +18,10 @@ interface numberFond {
         enjoyTxt: string;
         seeAll: string;
         all: string;
-        standart: string;
-        deluxe: string;
-        lux: string;
+        standard: string;
+        superior: string;
+        junior: string;
+        quadruple: string;
     };
   };
 }
@@ -34,9 +35,10 @@ const RoomFund = ({ translation }: numberFond) => {
 
     const categories: { id: RoomCategory; name: string }[] = [
         { id: 'all', name: translation.numberFond.all || 'Все' },
-        { id: 'standart', name: translation.numberFond.standart || 'Standart' },
-        { id: 'deluxe', name: translation.numberFond.deluxe || 'Deluxe' },
-        { id: 'lux', name: translation.numberFond.lux || 'Lux' },
+        { id: 'standard', name: translation.numberFond.standard || 'Standard' },
+        { id: 'superior', name: translation.numberFond.superior || 'Superior' },
+        { id: 'junior', name: translation.numberFond.junior || 'junior' },
+        { id: 'quadruple', name: translation.numberFond.quadruple || 'quadruple' },
     ];
 
     const activeCategory = useMemo(() => {
@@ -68,7 +70,7 @@ const RoomFund = ({ translation }: numberFond) => {
             <h2 className="lg:block text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">
                 {translation.numberFond.numberFond}
             </h2>
-            <div className="w-[530px]">
+            <div className="">
                 <h2 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] leading-12 font-bold mb-0 sm:mb-[10px] md:mb-[17px] lg:mb-[27px] text-[#17849A]">
                     {translation.numberFond.numberFond}
                 </h2>
@@ -129,6 +131,7 @@ const RoomFund = ({ translation }: numberFond) => {
                     >
                     <RoomCard
                         image={room.image}
+                        underCategories={room.underCategories}
                         title={room.title[locale]}
                         features={room.features[locale]}
                         onClick={() => handleOpenRoom(room)}
@@ -148,6 +151,7 @@ const RoomFund = ({ translation }: numberFond) => {
                         key={room.id}
                         image={room.image}
                         title={room.title[locale]}
+                        underCategories={room.underCategories}
                         features={room.features[locale]}
                         onClick={() => handleOpenRoom(room)}
                      />

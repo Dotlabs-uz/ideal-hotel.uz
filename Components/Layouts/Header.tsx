@@ -40,6 +40,9 @@ const Header = ({ lang, translation }: HeaderProps) => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
+          <Link href={`/${lang}/`} className="hover:underline">
+            {translation.Header.Home}
+          </Link>
           <Link href={`/${lang}/rooms`} className="hover:underline">
             {translation.Header.Numbers}
           </Link>

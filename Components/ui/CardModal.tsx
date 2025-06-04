@@ -35,6 +35,8 @@ const CardDrawer = ({ open, onOpenChange, card }: CardDrawerProps) => {
     setCurrentIndex((prev) => (prev === card.images.length - 1 ? 0 : prev + 1));
   };
 
+  console.log(card)
+
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="h-[95vh] rounded-t-[16px] p-5 lg:p-10">
@@ -74,7 +76,7 @@ const CardDrawer = ({ open, onOpenChange, card }: CardDrawerProps) => {
                     key={idx}
                     src={img}
                     alt={`preview-${idx}`}
-                    className={`rounded-[4px] object-cover w-full cursor-pointer border-2 transition-all duration-200 ${
+                    className={`rounded-[4px] object-cover w-full cursor-pointer border-2 h-[120px] transition-all duration-200 ${
                         currentIndex === idx ? 'border-[#00748E]' : 'border-transparent'
                     }`}
                     onClick={() => setCurrentIndex(idx)}
@@ -100,12 +102,12 @@ const CardDrawer = ({ open, onOpenChange, card }: CardDrawerProps) => {
                 <h3 className="text-lg text-[#00748E]">Удобства В Номере</h3>
                 <div className="grid grid-cols-2 gap-2 mt-2 text-sm">
                     <ul className="list-disc list-inside space-y-1">
-                    {card.amenities.map((item, idx) => (
+                    {card.amenities?.map((item, idx) => (
                         <li key={`amenity-${idx}`}>{item}</li>
                     ))}
                     </ul>
                     <ul className="list-disc list-inside space-y-1">
-                    {card.amenities2.map((item, idx) => (
+                    {card.amenities2?.map((item, idx) => (
                         <li key={`amenity2-${idx}`}>{item}</li>
                     ))}
                     </ul>

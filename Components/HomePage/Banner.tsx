@@ -17,7 +17,7 @@ const Banner = ({ translation }: BannerProps) => {
   return (
     <div
       className="w-full h-[400px] md:h-[600px] lg:h-[800px] bg-cover bg-center flex flex-col justify-center text-white px-4"
-      style={{ backgroundImage: "url('/BannerImages/receptionTop.png')" }}
+      style={{ backgroundImage: "url('/BannerImages/receptionTop.webp')" }}
     >
       <div className="relative h-full max-w-[1200px] w-full flex justify-between items-center mx-auto">
         
@@ -37,7 +37,7 @@ const Banner = ({ translation }: BannerProps) => {
           </motion.p>
 
           <motion.h1
-            className="w-[310px] md:w-[600px] lg:w-fit text-[48px] md:text-[80px] lg:text-[135px] font-bold leading-12 md:leading-20 lg:leading-32"
+            className="font-oceanic w-[310px] md:w-[600px] lg:w-fit text-[48px] md:text-[80px] lg:text-[135px] font-bold leading-12 md:leading-20 lg:leading-32"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}

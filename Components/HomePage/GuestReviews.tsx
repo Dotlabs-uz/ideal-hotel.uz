@@ -55,17 +55,17 @@ export default function GuestReviews({ translation }: Props) {
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="keen-slider__slide bg-[#F8F8F8] p-[27px] w-[100px] my-3 rounded-[8px] min-h-[180px]"
+            className="keen-slider__slide bg-[#F8F8F8] p-[27px] w-[100px] my-3 rounded-[8px]"
             style={{ boxShadow: '0 3px 10px 0 gray' }}
           >
-            <p className="text-[10px] md:text-[12px] lg:text-[14px] mb-2">"{review.text}"</p>
-            <div className="flex items-center gap-1 mt-[18px]">
+            <div className="flex items-center gap-1 mb-[10px]">
                 <Image src="/review/avatar.png" alt='photo' width={50} height={50} className='w-[30px] md:w-[40px] lg:w-[50px]' />
                 <div className="">
                     <p className="text-[#000000] text-[14px] md:text-[16px] lg:text-[18px] font-semibold">{review.name}</p>
                     <p className="text-[#000000] text-[10px] md:text-[11px] lg:text-[12px] font-medium">{review.date}</p>
                 </div>
             </div>
+            <p className="text-[10px] md:text-[12px] lg:text-[14px]">"{review.text}"</p>
           </div>
         ))}
       </div>

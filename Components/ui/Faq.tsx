@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { faqs } from '@/lib/data/faqs';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 interface Props {
   translation: {
@@ -16,6 +17,8 @@ interface Props {
 
 const FAQ = ({ translation }: Props) => {
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+  const pathname = usePathname();
+  const locale = (pathname.split('/')[1] as 'ru' | 'uz' | 'en') || 'ru';
 
   const toggle = (index: number) => {
     setOpenIndexes((prev) =>
@@ -44,7 +47,7 @@ const FAQ = ({ translation }: Props) => {
               onClick={() => toggle(index)}
               className="w-full flex justify-between items-center text-left text-[#17849A] font-medium text-[18px] sm:text-[18px] md:text-[20px] lg:text-[24px]"
             >
-              {item.question}
+              {item.question[locale]}
               <motion.div
                 animate={{ rotate: openIndexes.includes(index) ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
@@ -63,7 +66,7 @@ const FAQ = ({ translation }: Props) => {
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                   className="mt-4 text-[#00232A] text-sm sm:text-base overflow-hidden"
                 >
-                  {item.answer}
+                  {item.answer[locale]}
                 </motion.p>
               )}
             </AnimatePresence>

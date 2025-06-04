@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 
 interface ContactFormProps {
@@ -8,13 +8,13 @@ interface ContactFormProps {
   };
 }
 
-const iconLinks = [
-  '/images/icon/facebook.png',
-  '/images/icon/twiter.png',
-  '/images/icon/instagram.png',
-  '/images/icon/youtube.png',
-  '/images/icon/linkedin.png'
-];
+// const iconLinks = [
+//   '/images/icon/facebook.png',
+//   '/images/icon/twiter.png',
+//   '/images/icon/instagram.png',
+//   '/images/icon/youtube.png',
+//   '/images/icon/linkedin.png'
+// ];
 
 const ContactInfo = ({ translation }: ContactFormProps) => {
   return (
@@ -22,7 +22,7 @@ const ContactInfo = ({ translation }: ContactFormProps) => {
       <h1 className="text-[27px] md:text-[36px] mb-[30px]">{translation.header}</h1>
       <p className="text-[14px] md:text-[18px] w-[326px] md:w-[434px] font-light">{translation.txt}</p>
 
-      <div className="flex items-center gap-[20px] px-[10px] mt-[15px]">
+      {/* <div className="flex items-center gap-[20px] px-[10px] mt-[15px]">
         {iconLinks.map((icon, index) => (
           <Image
             key={index}
@@ -33,7 +33,7 @@ const ContactInfo = ({ translation }: ContactFormProps) => {
             className='w-[18px] md:w-[26px]'
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

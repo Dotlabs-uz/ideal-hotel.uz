@@ -23,9 +23,10 @@
         "enjoyTxt": "Ҳар бир батафсил қулайлигингиз учун диққат билан ўйланилган, бизнинг хоналаримизда ажойиб қулайликдан баҳраманд бўлинг.",
         "seeAll": "Ҳаммасини кўриш",
         "all": "Ҳамма",
-        "standart": "Стандарт",
-        "deluxe": "Делюкс",
-        "lux": "Люкс"
+        "standard": "Standart",
+        "superior": "Superior",
+        "junior": "Urta lux",
+        "quadruple": "Tõrt õrindiķli"
     },
     "services": {
       "servic": "Qulayliklar va xizmatlar",

@@ -23,9 +23,10 @@
         "enjoyTxt": "Enjoy excellent comfort in our rooms, where every detail is thoughtfully designed for your convenience.",
         "seeAll": "See all",
         "all": "All",
-        "standart": "Standard",
-        "deluxe": "Deluxe",
-        "lux": "Lux"
+        "standard": "Standard",
+        "superior": "Superior",
+        "junior": "Junior Suite",
+        "quadruple": "Quadruple"
     },
     "services": {
       "servic": "Amenities and services",

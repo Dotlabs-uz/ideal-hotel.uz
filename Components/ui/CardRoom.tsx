@@ -3,14 +3,16 @@ import { useState } from "react";
 type RoomCardProps = {
   image: string;
   title: string;
+  underCategories: string,
   features: string[];
   onClick?: () => void;
 };
 
-const RoomCard = ({ image, title, features, onClick }: RoomCardProps) => {
-
+const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCardProps) => {
+  console.log(underCategories);
+  
   return (
-    <div className="max-w-[418px] rounded overflow-hidden" 
+    <div className="max-w-[418px] rounded overflow-hidden relative" 
     onClick={onClick}>
       <img src={image} alt={title} className="w-[209px] sm:w-[260px] md:w-[300px] lg:w-[418px] bg-cover bg-center" />
       {/* h-[209px] sm:h-[260px] md:h-[300px] lg:h-[419px] */}
@@ -20,6 +22,9 @@ const RoomCard = ({ image, title, features, onClick }: RoomCardProps) => {
         <p className="text-[#000] text-[8px] lg:text-[14px]">
           {features.join(' | ')}
         </p>
+      </div>
+      <div className="absolute top-2 left-2">
+        <h2 className="px-[10px] py-[2px]  rounded-full bg-[#000]/70 text-white font-medium">{underCategories}</h2>
       </div>
     </div>
   );

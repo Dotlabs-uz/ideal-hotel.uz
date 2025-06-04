@@ -8,7 +8,7 @@ import RoomCard from '../ui/CardRoom';
 import CardModal from '../ui/CardModal';
 import { mapRoomToCardData } from '@/lib/mapRoomToCardData';
 
-type RoomCategory = 'all' | 'standart' | 'deluxe' | 'lux';
+type RoomCategory = 'all' | 'standard' | 'superior' | 'junior' | 'quadruple';
 
 interface numberFond {
   translation: {
@@ -17,9 +17,10 @@ interface numberFond {
       enjoyTxt: string;
       seeAll: string;
       all: string;
-      standart: string;
-      deluxe: string;
-      lux: string;
+      standard: string;
+      superior: string;
+      junior: string;
+      quadruple: string;
     };
   };
 }
@@ -33,9 +34,10 @@ const RoomScreen = ({ translation }: numberFond) => {
 
   const categories: { id: RoomCategory; name: string }[] = [
     { id: 'all', name: translation.numberFond.all || 'Все' },
-    { id: 'standart', name: translation.numberFond.standart || 'Standart' },
-    { id: 'deluxe', name: translation.numberFond.deluxe || 'Deluxe' },
-    { id: 'lux', name: translation.numberFond.lux || 'Lux' },
+    { id: 'standard', name: translation.numberFond.standard || 'standard' },
+    { id: 'superior', name: translation.numberFond.superior || 'superior' },
+    { id: 'junior', name: translation.numberFond.junior || 'junior' },
+    { id: 'quadruple', name: translation.numberFond.quadruple || 'quadruple' },
   ];
 
   const activeCategory = useMemo(() => {
@@ -56,6 +58,9 @@ const RoomScreen = ({ translation }: numberFond) => {
   const filteredRooms = rooms.filter(room =>
     activeCategory === 'all' ? true : room.category === activeCategory
   );
+
+  console.log(rooms);
+  
 
   const segments = pathname.split('/');
   const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
@@ -98,10 +103,11 @@ const RoomScreen = ({ translation }: numberFond) => {
                     transition={{ duration: 0.3 }}
                 >
                     <RoomCard
-                    image={room.image}
-                    title={room.title[locale]}
-                    features={room.features[locale]}
-                    onClick={() => handleOpenRoom(room)}
+                      image={room.image}
+                      title={room.title[locale]}
+                      features={room.features[locale]}
+                      underCategories={room.underCategories}
+                      onClick={() => handleOpenRoom(room)}
                     />
                 </motion.div>
                 ))}

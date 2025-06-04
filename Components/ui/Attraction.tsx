@@ -22,9 +22,11 @@ const Attractions = () => {
                   {item.title[locale]}
                 </p>
               </div>
-              <p className="text-[12px] md:text-[14px] lg:text-[16px] w-[160px] md:w-[180px] lg:w-[210px] text-gray-600">
-                {item.description[locale]}
-              </p>
+              <div className="h-[100px] md:h-[110px] lg:h-[120px] overflow-y-auto pr-1">
+                <p className="text-[12px] md:text-[14px] lg:text-[16px] w-[160px] md:w-[180px] lg:w-[210px] text-gray-600">
+                  {item.description[locale]}
+                </p>
+              </div>
               <div className="absolute bottom-[12px] left-[24px] text-[10px] md:text-[12px] lg:text-[14px] text-[#000]">
                 <div className="flex items-center gap-1 mb-1">
                   <Image src="/images/MapLocation.png" alt='location' width={14} height={14} className='w-[10px] md:w-[12px] lg:w-[14px]' />

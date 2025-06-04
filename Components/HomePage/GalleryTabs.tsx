@@ -22,11 +22,11 @@ const categories = [
     },
   },
   {
-    id: 'pool',
+    id: 'bar',
     label: {
-      ru: 'Бассейн',
-      uz: 'Hovuz',
-      en: 'Pool',
+      ru: 'Бар',
+      uz: 'Bar',
+      en: 'Bar',
     },
   },
   {
@@ -40,10 +40,10 @@ const categories = [
 ];
 
 const images = [
-  { id: 1, src: '/images/shvedTable.png', alt: 'Завтрак', category: 'breakfast' },
-  { id: 2, src: '/images/shvedTable.png', alt: 'Ресторан', category: 'restaurant' },
-  { id: 3, src: '/images/shvedTable.png', alt: 'Бассейн', category: 'pool' },
-  { id: 4, src: '/images/shvedTable.png', alt: 'Спа', category: 'spa' },
+  { id: 1, src: '/images/shved.webp', alt: 'Завтрак', category: 'breakfast' },
+  { id: 2, src: '/images/restouran.webp', alt: 'Ресторан', category: 'restaurant' },
+  { id: 3, src: '/images/bar.webp', alt: 'Бар', category: 'bar' },
+  { id: 4, src: '/images/shvedTable.webp', alt: 'Спа', category: 'spa' },
 ];
 
 const GalleryTabs = ({
