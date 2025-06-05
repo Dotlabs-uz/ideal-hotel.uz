@@ -53,7 +53,7 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    '/((?!api|_next/static|_next/|robots.txt|sitemap.xml|ModalRoom|standard|next.svg|window.svg|vercel.svg|file.svg|globe.svg|Header|logo.png|About|BannerImages|nextBanner.png|receptionTop.png|ten.png|images|room|standart.png|review|avatar.png).*)'
+    '/((?!api|_next/static|_next/|robots.txt|sitemap.xml|ModalRoom|standard|next.svg|window.svg|vercel.svg|file.svg|globe.svg|Header|logo.png|About|BannerImages|nextBanner.png|receptionTop.png|ten.png|images|room|standart.png|review|avatar.png|fonts).*)'
     // Optional: only run on root (/) URL
   ],
 };
