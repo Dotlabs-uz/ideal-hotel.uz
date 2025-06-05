@@ -20,7 +20,7 @@ const ContactInfo = ({ translation }: ContactFormProps) => {
   return (
     <div className="text-[#fff]">
       <h1 className="text-[27px] md:text-[36px] mb-[30px]">{translation.header}</h1>
-      <p className="text-[14px] md:text-[18px] w-[326px] md:w-[434px] font-light">{translation.txt}</p>
+      <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="text-[14px] md:text-[18px] w-[326px] md:w-[434px] font-light">{translation.txt}</p>
 
       {/* <div className="flex items-center gap-[20px] px-[10px] mt-[15px]">
         {iconLinks.map((icon, index) => (

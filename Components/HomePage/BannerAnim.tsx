@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface BannerProps {
   translation: {
@@ -8,6 +9,7 @@ interface BannerProps {
       welcome: string;
       bannerTxt: string;
       animationTxt: string;
+      Book: string;
     };
   };
 }
@@ -19,9 +21,19 @@ const BannerAnim = ({ translation }: BannerProps) => {
         style={{ backgroundImage: "url('/BannerImages/ten.png')" }}>
 
         <div className="text-white z-10 w-[120px] md:w-[150px] lg:w-[200px]">
-            <h2 className="text-[12px] md:text-[16px] lg:text-[20px] font-medium mb-6">
+            <h2 style={{ fontFamily: 'Monrope, sans-serif', fontWeight: 300 }} 
+              className="text-[12px] md:text-[16px] lg:text-[20px] font-medium mb-6">
               {translation.banner.animationTxt}
             </h2>
+            <div className="">
+                <Link
+                  style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
+                  href={{}}
+                  className='px-[20px] sm:px-[39px] py-2 rounded-[4px] text-[12px] sm:text-[14px] transition-colors text-[#fff] border border-[#fff] hover:bg-gray-50 inline-block text-center'
+                >
+                  {translation.banner.Book}
+                </Link>
+            </div>
         </div>
 
         <div className="h-[600px]  pt-[50px] relative">

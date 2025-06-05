@@ -23,18 +23,18 @@ const ContactMap = ({ translation }: Props) => {
       {/* Блок с контактами */}
       <div className="w-[1200px] mx-auto bg-amber-200">
         <div className="absolute top-10 left-10 bg-[#02798C] text-white p-6 rounded-lg shadow-lg max-w-[300px] w-full">
-            <h3 className="text-sm mb-2">{translation.contactsMap.contact}</h3>
-            <p className="text-lg font-semibold leading-tight">
+            <h3 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="text-sm mb-2">{translation.contactsMap.contact}</h3>
+            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 500}} className="text-lg font-semibold leading-tight">
             Samarkand st. <br /> Mirzo-Ulugbek 52
             </p>
 
-            <p className="mt-4 px-2 py-1 bg-[#015B6A] rounded-md font-medium text-base inline-block">
+            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 500}} className="mt-4 px-2 py-1 bg-[#015B6A] rounded-md font-medium text-base inline-block">
             +998 11 222 12 34
             </p>
 
-            <p className="mt-3 text-base">info@idealhotel.uz</p>
+            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="mt-3 text-[18px]">info@idealhotel.uz</p>
 
-            <button className="mt-6 w-full py-2 border border-white rounded text-white hover:bg-white hover:text-[#02798C] transition duration-200">
+            <button style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="mt-6 w-full py-2 border border-white rounded text-white hover:bg-white hover:text-[#02798C] transition duration-200">
               {translation.contactsMap.route}
             </button>
         </div>

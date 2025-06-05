@@ -10,7 +10,8 @@
     "banner": {
         "welcome": "WELCOME TO",
         "bannerTxt": "Hotel for every moment rich in emotion",
-        "animationTxt": "Every moment feels like the first time in paradise view"
+        "animationTxt": "Every moment feels like the first time in paradise view",
+        "Book": "to Book"
     },
     "advantages": {
         "services": "Facilities and Services",

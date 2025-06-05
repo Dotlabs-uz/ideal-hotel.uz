@@ -74,19 +74,22 @@ const GalleryTabs = ({
   return (
     <div className=" lg:pt-[80px] px-6">
         <div className="flex text-center gap-0 md:gap-5 sm:text-left lg:gap-[20px] flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap mb-[20px] md:mb-[30px] lg:mb-[50px]">
-            <h2 className="w-full sm:w-fit  text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">
+            <h2 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
+              className="w-full sm:w-fit  text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">
                 {translation.services.servic}
             </h2>
             <div className="">
                 <h2 className="text-[28px] sm:text-[36px] md:text-[48px] leading-15 lg:text-[64px] font-bold mb-0 sm:mb-[10px] md:mb-[17px] lg:mb-[27px] text-[#17849A]">
                     {translation.services.breackfast}
                 </h2>
-                <p className="text-[#00232A] my-3 md:my-0 lg:my-0 mx-auto max-w-[600px] font-light text-[14px] sm:text-[14px] md:text-[16px] lg:text-[20px]">
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} 
+                  className="text-[#00232A] my-3 md:my-0 lg:my-0 max-w-[600px] font-light text-[14px] sm:text-[14px] md:text-[16px] lg:text-[20px]">
                     {translation.services.breackfastTxt}
                 </p>
             </div>
         </div>
-        <div className="relative grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} 
+        className="relative grid grid-cols-2 sm:grid-cols-4 gap-2">
           {categories.map(category => {
             const isActive = activeCategory === category.id;
             return (

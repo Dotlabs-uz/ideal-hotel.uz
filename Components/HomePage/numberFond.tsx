@@ -67,18 +67,21 @@ const RoomFund = ({ translation }: numberFond) => {
     <section className="pt-[20px] lg:pt-[80px] px-6">
       <div>
         <div className="flex lg:justify-between flex-wrap sm:flex-wrap md:flex-wrap items-start gap-0 md:gap-[10px] lg:gap-0 ">
-            <h2 className="lg:block text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">
+            <h2 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
+                className="lg:block text-[16px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-light text-[#17849A]">
                 {translation.numberFond.numberFond}
             </h2>
             <div className="">
                 <h2 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] leading-12 font-bold mb-0 sm:mb-[10px] md:mb-[17px] lg:mb-[27px] text-[#17849A]">
                     {translation.numberFond.numberFond}
                 </h2>
-                <p className="text-[#00232A] max-w-2xl mx-auto font-light text-[14px] sm:text-[14px] md:text-[16px] lg:text-[20px]">
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
+                    className="text-[#00232A] max-w-2xl mx-auto font-light text-[14px] sm:text-[14px] md:text-[16px] lg:text-[20px]">
                     {translation.numberFond.enjoyTxt}
                 </p>
 
-                <div className="relative flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
+                <div style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} 
+                    className="relative flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
                     {categories.map((category) => {
                         const isActive = activeCategory === category.id;
                         return (
@@ -110,6 +113,7 @@ const RoomFund = ({ translation }: numberFond) => {
             </div>
             <div className="hidden lg:block text-center">
                 <Link
+                style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
                 href={`/${locale}/rooms`}
                 className='px-[20px] w-[190px] sm:px-6 py-2 rounded-[4px] text-sm sm:text-base transition-colors bg-white text-[#17849A] border border-[#17849A] hover:bg-gray-50 inline-block text-center'
                 >
@@ -169,6 +173,7 @@ const RoomFund = ({ translation }: numberFond) => {
 
             <div className="block md:hidden text-center mt-[20px]">
                 <Link
+                style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
                 href={`/${locale}/rooms`}
                 className='px-[20px] w-[190px] sm:px-6 py-2 rounded-[4px] text-sm sm:text-base transition-colors bg-white text-[#17849A] border border-[#17849A] hover:bg-gray-50 inline-block text-center'
                 >

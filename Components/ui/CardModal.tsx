@@ -91,22 +91,22 @@ const CardDrawer = ({ open, onOpenChange, card }: CardDrawerProps) => {
                     {card.title}
                 </DrawerTitle>
                 </DrawerHeader>
-                <p className="text-[#000] text-sm md:text-base">{card.features.join(' | ')}</p>
-                <p className="text-[#00232A] text-sm md:text-base">{card.description}</p>
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="text-[#000] text-sm md:text-base">{card.features.join(' | ')}</p>
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#00232A] text-sm md:text-base">{card.description}</p>
 
-                <button className="bg-[#00748E] text-white px-10 py-3 rounded-[4px] hover:opacity-90">
-                Book Now
+                <button style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="bg-[#00748E] text-white px-10 py-3 rounded-[4px] hover:opacity-90">
+                  Book Now
                 </button>
 
                 <div>
-                <h3 className="text-lg text-[#00748E]">Удобства В Номере</h3>
+                <h3 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-lg text-[#00748E]">Удобства В Номере</h3>
                 <div className="grid grid-cols-2 gap-2 mt-2 text-sm">
-                    <ul className="list-disc list-inside space-y-1">
+                    <ul style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="list-disc list-inside space-y-1">
                     {card.amenities?.map((item, idx) => (
                         <li key={`amenity-${idx}`}>{item}</li>
                     ))}
                     </ul>
-                    <ul className="list-disc list-inside space-y-1">
+                    <ul style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="list-disc list-inside space-y-1">
                     {card.amenities2?.map((item, idx) => (
                         <li key={`amenity2-${idx}`}>{item}</li>
                     ))}

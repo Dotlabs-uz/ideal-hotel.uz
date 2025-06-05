@@ -18,11 +18,11 @@ const ContactsLink = ({ lang = "ru" }: ContactsLinkProps) => {
             <h2 className="text-[27px] md:text-[30px] lg:text-[36px] text-[#17849A] font-medium">
               {item.title}
             </h2>
-            <p className="text-[13px] mx-auto md:mx-0 md:text-[16px] lg:text-[18px] text-[#4A4A4A] w-[235px] lg:w-[315px]">
+            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[13px] mx-auto md:mx-0 md:text-[16px] lg:text-[18px] text-[#4A4A4A] w-[235px] lg:w-[315px]">
               {item.description}
             </p>
             <div className="flex items-center gap-3 justify-center md:justify-start">
-                <p className="text-[22px] md:text-[26px] lg:text-[30px]">{item.contact}</p>
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 500}} className="text-[22px] md:text-[26px] lg:text-[30px]">{item.contact}</p>
                 {
                     item.arrow && <Image src="/images/icon/arrowRight.png" alt="arrow" width={41} height={20} className="w-[30px] h-[15px] md:w-[41px] md:h-[20px]" />
                 }

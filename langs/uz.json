@@ -10,7 +10,8 @@
     "banner": {
         "welcome": "XUSH KELIBSIZ",
         "bannerTxt": "Har bir hissiyotga boy lahzalar uchun mehmonxona",
-        "animationTxt": "Har bir lahza goʻyo jannat manzarasida birinchi marta kabi tuyuladi"
+        "animationTxt": "Har bir lahza goʻyo jannat manzarasida birinchi marta kabi tuyuladi",
+        "Book": "Band qilish"
     },
     "advantages": {
         "services": "Qulayliklar va xizmatlar",

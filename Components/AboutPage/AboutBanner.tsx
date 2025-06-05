@@ -20,13 +20,13 @@ const AboutBanner = ({ translation }: BannerProps) => {
             <h2 className="text-white text-[40px] md:text-[60px] lg:text-[88px] font-bold text-center">
             {translation.about.header}
             </h2>
-            <p className="text-[#fff] text-[16px] md:text-[20px] lg:text-[24px] w-[300px] md:w-[400px] lg:w-[650px] text-center">{translation.about.txt}</p>
+            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="text-[#fff] text-[16px] md:text-[20px] lg:text-[24px] w-[300px] md:w-[400px] lg:w-[650px] text-center">{translation.about.txt}</p>
         </div>
       </div>
 
       {/* Фоновая картинка */}
       <Image
-        src="/BannerImages/AboutBanner.png"
+        src="/BannerImages/AboutBanner.webp"
         alt="Banner"
         width={1260}
         height={610}

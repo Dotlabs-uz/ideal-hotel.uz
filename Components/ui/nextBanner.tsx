@@ -16,7 +16,7 @@ const HeroRooms = ({ translation }: HeroRoomsProps) => {
   return (
     <section className="relative w-full h-[280px] md:h-[400px] lg:h-[500px] text-white">
       <Image
-        src="/BannerImages/nextBanner.png"
+        src="/BannerImages/nextBanner.webp"
         alt="Rooms Background"
         fill
         className="object-cover"
@@ -40,7 +40,7 @@ const HeroRooms = ({ translation }: HeroRoomsProps) => {
         <h1 className="text-[36px] md:text-[56px] lg:text-[88px] font-bold mb-2">
           {translation.numberFond}
         </h1>
-        <p className="text-[12px] md:text-[18px] lg:text-[24px] w-[300px] md:w-2xl">
+        <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="text-[12px] md:text-[18px] lg:text-[24px] w-[300px] md:w-2xl">
           {translation.subtitle}
         </p>
       </div>

@@ -18,23 +18,23 @@ const Attractions = () => {
             >
               <div className="flex items-center gap-3">
                 <Image src={item.icon} alt='location' width={47} height={46} className='w-[24px] md:w-[35px] lg:w-[46px]' />
-                <p className="w-[120px] md:w-[130px] lg:w-[150px] text-[#00232A] text-[12px] md:text-[14px] lg:text-[16px]">
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="w-[120px] md:w-[130px] lg:w-[150px] text-[#00232A] text-[12px] md:text-[14px] lg:text-[16px]">
                   {item.title[locale]}
                 </p>
               </div>
               <div className="h-[100px] md:h-[110px] lg:h-[120px] overflow-y-auto pr-1">
-                <p className="text-[12px] md:text-[14px] lg:text-[16px] w-[160px] md:w-[180px] lg:w-[210px] text-gray-600">
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[12px] md:text-[14px] lg:text-[16px] w-[160px] md:w-[180px] lg:w-[210px] text-gray-600">
                   {item.description[locale]}
                 </p>
               </div>
               <div className="absolute bottom-[12px] left-[24px] text-[10px] md:text-[12px] lg:text-[14px] text-[#000]">
                 <div className="flex items-center gap-1 mb-1">
                   <Image src="/images/MapLocation.png" alt='location' width={14} height={14} className='w-[10px] md:w-[12px] lg:w-[14px]' />
-                  <span>{item.distance}</span>
+                  <span style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}>{item.distance}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Image src="/images/time.png" alt='map' width={14} height={14} className='w-[10px] md:w-[12px] lg:w-[14px]' />
-                  <span>{item.time}</span>
+                  <span style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}>{item.time}</span>
                 </div>
               </div>
             </div>

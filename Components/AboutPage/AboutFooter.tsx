@@ -26,7 +26,7 @@ const AboutFooter = ({ translation }: BannerProps) => {
                 <h2 className="text-[#17849A] text-[26px] md:text-[32px] lg:text-[38px] leading-10 max-w-[80%] font-medium mx-auto">
                   {translation.about.Impression}
                 </h2>
-                <p className="text-[#534B4F] text-[14px] md:text-[16px] lg:text-[18px] max-w-[80%] mt-2 lg:mt-4 mx-auto">
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#534B4F] text-[14px] md:text-[16px] lg:text-[18px] max-w-[80%] mt-2 lg:mt-4 mx-auto">
                   {translation.about.impTxt}
                 </p>
             </div>

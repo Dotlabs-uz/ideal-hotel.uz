@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import './font.css';
+import type { Metadata } from "next";
+import localFont from 'next/font/local'
 import Header from "@/Components/Layouts/Header";
 import Footer from "@/Components/Layouts/Footer";
 
@@ -15,6 +17,21 @@ export const metadata: Metadata = {
   }
 };
 
+const Oceanic = localFont({
+  src: [
+    {
+      path: '../fonts/TRIAL-Oceanic/TRIAL_Oceanic-Regular-BF6487cfe600a81.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/TRIAL-Oceanic/TRIAL_Oceanic-Bold-BF6487cfe5cfe3d.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
+
 type Params = Promise<{ lang: Locale }>
 
 export default async function RootLayout({
@@ -29,10 +46,12 @@ export default async function RootLayout({
   const translation = await getDictionary(lang);
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={Oceanic.className}>
       <body>
         <PageTransition>
-          <Header lang={lang} translation={translation} />
+          <div style={{ fontFamily: 'Monrope, sans-serif' }}>
+            <Header lang={lang} translation={translation} />
+          </div>
           {children}
           <Footer lang={lang} translation={translation.footer} />
         </PageTransition>

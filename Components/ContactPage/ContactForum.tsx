@@ -16,7 +16,7 @@ const ContactForm = ({translation}: contactForm ) => {
     <div className=" md:max-w-[527px] mx-auto p-6 bg-[#F8F8F8] rounded-lg shadow-md">
       <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-medium text-[#17849A] mb-4">{translation.header}</h2>
       
-      <p className="text-gray-600 text-[10px] md:text-[12px] w-[250px] lg:w-[300px] lg:text-[14px] mb-6">
+      <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-gray-600 text-[10px] md:text-[12px] w-[250px] lg:w-[300px] lg:text-[14px] mb-6">
         {translation.txt}
       </p>
       
@@ -25,6 +25,7 @@ const ContactForm = ({translation}: contactForm ) => {
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-[#000] mb-1">{translation.name}</label>
             <input
+              style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}}
               type="text"
               id="name"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#17849A]"
@@ -34,6 +35,7 @@ const ContactForm = ({translation}: contactForm ) => {
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-[#000] mb-1">{translation.mail}</label>
             <input
+              style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}}
               type="email"
               id="email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#17849A]"
@@ -49,13 +51,14 @@ const ContactForm = ({translation}: contactForm ) => {
             {translation.messages}
           </label>
           <textarea
+            style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}}
             id="message"
             rows={4}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#17849A]"
           ></textarea>
         </div>
         
-        <button className="bg-[#17849A] w-full text-white font-medium py-3 px-6 rounded-md transition duration-300">
+        <button style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="bg-[#17849A] w-full text-white font-medium py-3 px-6 rounded-md transition duration-300">
           {translation.btn}
         </button>
       </div>

@@ -31,7 +31,7 @@ const socialLinks = [
 
 const Footer: React.FC<FooterProps> = ({ translation, lang }) => {
   return (
-    <footer className="bg-[#2A2A2A] text-white py-10 px-5 lg:px-20">
+    <footer style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="bg-[#2A2A2A] text-white py-10 px-5 lg:px-20">
       <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-8 items-start lg:flex lg:justify-between ">
         <div className="flex flex-col items-start gap-2 lg:w-[200px]">
           <div className="flex flex-col items-start">

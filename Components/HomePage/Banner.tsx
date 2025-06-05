@@ -9,6 +9,7 @@ type BannerProps = {
       welcome: string;
       bannerTxt: string;
       animationTxt: string;
+      Book: string;
     };
   };
 };
@@ -28,6 +29,7 @@ const Banner = ({ translation }: BannerProps) => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <motion.p
+            style={{ fontFamily: 'Monrope, sans-serif', fontWeight: 500 }}
             className="text-[14px] md:text-[16px] lg:text-[20px]"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

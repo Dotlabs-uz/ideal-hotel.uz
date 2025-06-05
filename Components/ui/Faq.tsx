@@ -29,7 +29,7 @@ const FAQ = ({ translation }: Props) => {
   return (
     <section className="px-4 py-[0px] lg:py-16">
       <div className="text-center mb-12">
-        <p className="text-[#17849A] text-lg sm:text-xl mb-2">
+        <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="text-[#17849A] text-lg sm:text-xl mb-2">
           {translation.faq.faq}
         </p>
         <h2 className="text-[#17849A] text-3xl sm:text-4xl font-bold">
@@ -44,6 +44,7 @@ const FAQ = ({ translation }: Props) => {
             className="w-full md:w-[48%] border-b border-[#17849A] pb-4"
           >
             <button
+              style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}}
               onClick={() => toggle(index)}
               className="w-full flex justify-between items-center text-left text-[#17849A] font-medium text-[18px] sm:text-[18px] md:text-[20px] lg:text-[24px]"
             >
@@ -60,6 +61,7 @@ const FAQ = ({ translation }: Props) => {
               {openIndexes.includes(index) && (
                 <motion.p
                   key="content"
+                  style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}}
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}

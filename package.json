@@ -28,7 +28,7 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.8",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^19",
