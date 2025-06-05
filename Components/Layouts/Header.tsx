@@ -46,7 +46,7 @@ const Header = ({ lang, translation }: HeaderProps) => {
           <Link href={`/${lang}/rooms`} className="hover:underline">
             {translation.Header.Numbers}
           </Link>
-          <Link href={`/${lang}/about`} className="hover:underline">
+          <Link href={`/${lang}/About`} className="hover:underline">
             {translation.Header.About}
           </Link>
           <Link href={`/${lang}/contact`} className="hover:underline">
