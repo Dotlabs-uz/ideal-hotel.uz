@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef } from 'react';
 import reviews from '@/lib/data/reviews.json';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 interface Props {
   translation: {
@@ -16,6 +17,8 @@ interface Props {
 
 export default function GuestReviews({ translation }: Props) {
   const sliderRef = useRef(null);
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] as 'ru' | 'uz' | 'en' || 'ru';
   const [sliderInstanceRef, slider] = useKeenSlider<HTMLDivElement>({
     slides: {
       perView: 3.2,
@@ -62,7 +65,7 @@ export default function GuestReviews({ translation }: Props) {
                 <Image src="/review/avatar.png" alt='photo' width={50} height={50} className='w-[30px] md:w-[40px] lg:w-[50px]' />
                 <div className="">
                     <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 600}} className="text-[#000000] text-[14px] md:text-[16px] lg:text-[18px] font-semibold">{review.name}</p>
-                    <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#000000] text-[10px] md:text-[11px] lg:text-[12px] font-medium">{review.date}</p>
+                    <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#000000] text-[10px] md:text-[11px] lg:text-[12px] font-medium">{review.date[locale]}</p>
                 </div>
             </div>
             <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[10px] md:text-[12px] lg:text-[14px]">"{review.text}"</p>

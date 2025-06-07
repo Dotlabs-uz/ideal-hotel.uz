@@ -30,11 +30,11 @@ const Attractions = () => {
               <div className="absolute bottom-[12px] left-[24px] text-[10px] md:text-[12px] lg:text-[14px] text-[#000]">
                 <div className="flex items-center gap-1 mb-1">
                   <Image src="/images/MapLocation.png" alt='location' width={14} height={14} className='w-[10px] md:w-[12px] lg:w-[14px]' />
-                  <span style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}>{item.distance}</span>
+                  <span style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}>{item.distance[locale]}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Image src="/images/time.png" alt='map' width={14} height={14} className='w-[10px] md:w-[12px] lg:w-[14px]' />
-                  <span style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}>{item.time}</span>
+                  <span style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}>{item.time[locale]}</span>
                 </div>
               </div>
             </div>

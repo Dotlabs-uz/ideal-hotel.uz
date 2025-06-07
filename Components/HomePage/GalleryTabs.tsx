@@ -30,11 +30,11 @@ const categories = [
     },
   },
   {
-    id: 'spa',
+    id: 'area',
     label: {
-      ru: 'Спа и отдых',
-      uz: 'Spa va dam olish',
-      en: 'Spa and relaxation',
+      ru: 'Зона отдыха',
+      uz: 'Dam olish zonasi',
+      en: 'Recreation area',
     },
   },
 ];
@@ -43,7 +43,7 @@ const images = [
   { id: 1, src: '/images/shved.webp', alt: 'Завтрак', category: 'breakfast' },
   { id: 2, src: '/images/restouran.webp', alt: 'Ресторан', category: 'restaurant' },
   { id: 3, src: '/images/bar.webp', alt: 'Бар', category: 'bar' },
-  { id: 4, src: '/images/shvedTable.webp', alt: 'Спа', category: 'spa' },
+  { id: 4, src: '/images/area.webp', alt: 'Зона отдыха', category: 'area' },
 ];
 
 const GalleryTabs = ({

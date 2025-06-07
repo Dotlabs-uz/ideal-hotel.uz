@@ -4,7 +4,6 @@ import { useMemo, useState } from 'react';
 import rooms from '@/lib/data/Room.json';
 import RoomCard from '../ui/CardRoom';
 import Link from 'next/link';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '../ui/dialog';
 import CardModal from '../ui/CardModal';
 import { mapRoomToCardData } from '@/lib/mapRoomToCardData';
 import { motion, AnimatePresence } from 'framer-motion';
