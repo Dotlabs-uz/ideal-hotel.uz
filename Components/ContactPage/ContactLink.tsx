@@ -22,10 +22,25 @@ const ContactsLink = ({ lang = "ru" }: ContactsLinkProps) => {
               {item.description}
             </p>
             <div className="flex items-center gap-3 justify-center md:justify-start">
-                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 500}} className="text-[22px] md:text-[26px] lg:text-[30px]">{item.contact}</p>
-                {
-                    item.arrow && <Image src="/images/icon/arrowRight.png" alt="arrow" width={41} height={20} className="w-[30px] h-[15px] md:w-[41px] md:h-[20px]" />
-                }
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+                <p
+                  style={{ fontFamily: 'Monrope, sans-serif', fontWeight: 500 }}
+                  className="text-[22px] md:text-[26px] lg:text-[30px]"
+                >
+                  {item.contact}
+                </p>
+                {item.arrow && (
+                  <Image
+                    src="/images/icon/arrowRight.png"
+                    alt="arrow"
+                    width={41}
+                    height={20}
+                    className="w-[30px] h-[15px] md:w-[41px] md:h-[20px]"
+                  />
+                )}
+              </a>
+            </div>
             </div>
           </div>
         ))}

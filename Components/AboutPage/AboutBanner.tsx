@@ -23,12 +23,12 @@ const AboutBanner = ({ translation }: BannerProps) => {
         </div>
       </div>
 
-      <div className="w-[90%] m-auto aspect-video relative mt-20 bg-cover">
+      <div className="max-w-[1260px] m-auto aspect-video relative mt-20 bg-cover">
         <Image
           src="/BannerImages/AboutBanner.webp"
           alt="Banner"
           fill
-          className="bg-center object-cover"
+          className="bg-center object-cover mb-[50px]"
         />
       </div>
     </div>

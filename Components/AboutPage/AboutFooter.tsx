@@ -12,11 +12,12 @@ type BannerProps = {
 };
 
 const images = [
-  { src: "/About/Cafe.png", alt: "Image 1" },
-  { src: "/About/Rest.png", alt: "Image 2" },
-  { src: "/About/room.png", alt: "Image 3" },
-  { src: "/About/room.png", alt: "Image 4" },
-  { src: "/About/room.png", alt: "Image 5" },
+  { src: "/About/holl.webp", alt: "Image 1" },
+  { src: "/About/rest.webp", alt: "Image 2" },
+  { src: "/About/garden.webp", alt: "Image 3" },
+  { src: "/About/Cafe.png", alt: "Image 4" },
+  { src: "/About/bar.webp", alt: "Image 5" },
+  { src: "/About/food.webp", alt: "Image 6" },
 ];
 
 const AboutFooter = ({ translation }: BannerProps) => {
@@ -40,7 +41,7 @@ const AboutFooter = ({ translation }: BannerProps) => {
                   width={0} 
                   height={0}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                  className="w-full h-auto rounded-[4px] object-cover"
+                  className="w-full h-[400px] rounded-[4px] object-cover"
                 />
               ))}
             </div>

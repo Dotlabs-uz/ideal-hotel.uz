@@ -23,7 +23,7 @@ const Banner = ({ translation }: BannerProps) => {
       <div className="relative h-full max-w-[1200px] w-full flex justify-between items-center mx-auto">
         
         <motion.div
-          className="z-20"
+          className="z-20 md:ml-[50px]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -39,7 +39,7 @@ const Banner = ({ translation }: BannerProps) => {
           </motion.p>
 
           <motion.h1
-            className="font-oceanic w-[310px] md:w-[600px] lg:w-fit text-[48px] md:text-[80px] lg:text-[135px] font-bold leading-12 md:leading-20 lg:leading-32"
+            className="font-oceanic w-[350px] sm:w-[410px] md:w-[600px] lg:w-[700px] text-[48px] md:text-[80px] lg:text-[90px] font-bold leading-12 md:leading-20 lg:leading-22"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}

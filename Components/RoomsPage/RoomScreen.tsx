@@ -69,7 +69,7 @@ const RoomScreen = ({ translation }: numberFond) => {
     <section className="max-w-[12660px] mx-auto mb-[50px] pt-[10px] lg:pt-[80px] px-6">
       <div>
         <div className="flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12 relative border-b border-gray-200">
-          <ul style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="flex w-full list-none p-0 m-0 font-medium text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px]">
+          <ul style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="grid grid-cols-3 lg:flex w-full list-none p-0 m-0 font-medium text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px]">
             {categories.map((category) => (
               <motion.li
                 key={category.id}

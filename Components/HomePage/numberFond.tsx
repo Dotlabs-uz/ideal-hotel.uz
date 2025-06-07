@@ -81,14 +81,14 @@ const RoomFund = ({ translation }: numberFond) => {
                 </p>
 
                 <div style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} 
-                    className="relative flex justify-between gap-1 sm:justify-start sm:gap-4 mb-[10px] md:mb-12">
+                    className="relative grid grid-cols-3 mt-[26px] md:flex md:justify-between gap-3 sm:justify-start md:gap-4 mb-[10px] md:mb-12">
                     {categories.map((category) => {
                         const isActive = activeCategory === category.id;
                         return (
                         <button
                             key={category.id}
                             onClick={() => handleClick(category.id)}
-                            className={`relative text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-full py-2 px-4 rounded-[4px] mt-[26px] transition-colors z-10 ${
+                            className={`relative text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-full py-2 px-4 rounded-[4px] transition-colors z-10 ${
                             isActive
                                 ? 'text-white'
                                 : 'text-[#17849A] border border-gray-200 hover:bg-gray-50'
@@ -171,7 +171,7 @@ const RoomFund = ({ translation }: numberFond) => {
                 />
             )}
 
-            <div className="block md:hidden text-center mt-[20px]">
+            <div className="block lg:hidden text-center mt-[20px]">
                 <Link
                 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
                 href={`/${locale}/rooms`}
