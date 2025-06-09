@@ -15,7 +15,7 @@ interface ContactFormProps {
     btn: string;
   };
 }
-const SITE_KEY = process.env.NEXT_PUBLIC_SITE_KEY!;
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
 
 const ContactForm = ({ translation }: ContactFormProps) => {
