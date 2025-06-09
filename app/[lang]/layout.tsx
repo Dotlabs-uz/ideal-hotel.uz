@@ -8,6 +8,7 @@ import Footer from "@/Components/Layouts/Footer";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import PageTransition from "@/Components/ui/PageTransition";
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "Ideal-Hotel.uz",
@@ -47,6 +48,12 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} className={Oceanic.className}>
+      <head>
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="beforeInteractive"
+        />
+      </head>
       <body>
         <PageTransition>
           <div style={{ fontFamily: 'Monrope, sans-serif' }}>

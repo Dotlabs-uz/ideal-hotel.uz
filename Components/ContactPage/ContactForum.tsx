@@ -17,12 +17,12 @@ interface ContactFormProps {
 }
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
+console.log(SITE_KEY)
 
 const ContactForm = ({ translation }: ContactFormProps) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<boolean | null>(null);
-  
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -49,6 +49,9 @@ const ContactForm = ({ translation }: ContactFormProps) => {
 
       const captchaRes = await axios.post('/api/verify-recaptcha', { token });
 
+      console.log(captchaRes.data.success);
+      console.log('reCAPTCHA token:', token);
+
       if (!captchaRes.data.success) {
         setSuccess(false);
         console.log('reCAPTCHA проверка не пройдена.');
@@ -59,6 +62,8 @@ const ContactForm = ({ translation }: ContactFormProps) => {
         parse_mode: 'HTML',
         text: msg,
       });
+
+      console.log('Telegram response:', res.data);
 
       if (res.status === 200 || res.status === 201) {
         setSuccess(true);
