@@ -11,8 +11,7 @@ type Params = Promise<{ lang: Locale }>
 export default async function Contact({params}:{params:Params}) {
 	
  const { lang } =await params
-
-  const translation = await getDictionary(lang);
+ const translation = await getDictionary(lang);
 
   return (
         <div className="">
