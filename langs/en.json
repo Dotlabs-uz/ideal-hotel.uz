@@ -7,6 +7,10 @@
         "Book": "to Book",
         "Marquee": "Exclusive Offer: Enjoy 20% Off Your First Stay – Limited Time Only! Book Now."
     },
+    "metadata": {
+        "title": "Ideal Hotel — Samarkand",
+        "description": "A modern and cozy hotel in the heart of Samarkand. Book your room online!"
+    },
     "banner": {
         "welcome": "WELCOME TO",
         "bannerTxt": "Hotel for every moment rich in emotion",

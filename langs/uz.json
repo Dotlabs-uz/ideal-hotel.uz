@@ -7,6 +7,10 @@
         "Book": "Band qilish",
         "Marquee": "Eksklyuziv taklif: Birinchi mehmonxonangizga 20% chegirma – faqat cheklangan muddat! Hozir band qiling."
     },
+    "metadata": {
+        "title": "Ideal Mehmonxonasi — Samarqand",
+        "description": "Zamonaviy va qulay mehmonxona Samarqand markazida. Xonangizni onlayn band qiling!"
+    },
     "banner": {
         "welcome": "XUSH KELIBSIZ",
         "bannerTxt": "Har bir tuyg‘uli on uchun mehmonxona",
