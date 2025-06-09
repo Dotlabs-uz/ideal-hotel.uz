@@ -1,24 +1,15 @@
 import { NextResponse } from 'next/server';
 
-export async function POST(req: Request) {
-  try {
-    const { token } = await req.json();
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+export async function POST(request: Request) {
+    const { token } = await request.json();
 
-    // Обязательно отправляем данные в формате application/x-www-form-urlencoded
-    const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        secret: secretKey!,
-        response: token,
-      }),
-    });
+    const res = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    { method: 'POST' }
+  );
 
-    const data = await res.json();
+  const data = await res.json();
 
-    return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ success: false }, { status: 500 });
-  }
+  return NextResponse.json(data);
+  
 }

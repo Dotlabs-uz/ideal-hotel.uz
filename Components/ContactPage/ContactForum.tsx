@@ -4,7 +4,6 @@ import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { load } from 'recaptcha-v3';
 
-
 interface ContactFormProps {
   translation: {
     header: string;
@@ -15,9 +14,9 @@ interface ContactFormProps {
     btn: string;
   };
 }
+
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
-console.log(SITE_KEY)
 
 const ContactForm = ({ translation }: ContactFormProps) => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -47,23 +46,19 @@ const ContactForm = ({ translation }: ContactFormProps) => {
       const recaptcha = await load(SITE_KEY);
       const token = await recaptcha.execute('submit');
 
-      const captchaRes = await axios.post('/api/verify-recaptcha', { token });
+      // const { data } = await axios.post('/api/verify-recaptcha', { token });
 
-      console.log(captchaRes.data.success);
-      console.log('reCAPTCHA token:', token);
+      // if (!data.success) {
+      //   setSuccess(false);
+      //   console.warn('❌ reCAPTCHA проверка не пройдена');
+      //   return;
+      // }
 
-      if (!captchaRes.data.success) {
-        setSuccess(false);
-        console.log('reCAPTCHA проверка не пройдена.');
-        return;
-      }
       const res = await axios.post(URL, {
         chat_id: process.env.NEXT_PUBLIC_CHAT_ID,
         parse_mode: 'HTML',
         text: msg,
       });
-
-      console.log('Telegram response:', res.data);
 
       if (res.status === 200 || res.status === 201) {
         setSuccess(true);
