@@ -12,9 +12,6 @@ export default async function Rooms({params}:{params:Params}) {
 
   const translation = await getDictionary(lang);
 
-  console.log(translation.Home.title);
-  
-
   return (
         <>
           <HeroRooms translation={translation.fondBanners}/>

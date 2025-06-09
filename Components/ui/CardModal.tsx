@@ -43,8 +43,6 @@ const CardDrawer = ({ open, onOpenChange, card, translation }: CardDrawerProps) 
     setCurrentIndex((prev) => (prev === card.images.length - 1 ? 0 : prev + 1));
   };
 
-  console.log(card)
-
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="h-[95vh] rounded-t-[16px] lg:p-10">

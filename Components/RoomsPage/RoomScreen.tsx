@@ -63,9 +63,6 @@ const RoomScreen = ({ translation }: numberFond) => {
     activeCategory === 'all' ? true : room.category === activeCategory
   );
 
-  console.log(rooms);
-  
-
   const segments = pathname.split('/');
   const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
 

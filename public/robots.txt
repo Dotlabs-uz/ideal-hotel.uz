@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://ideal-hotel.uz/sitemap.xml

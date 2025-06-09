@@ -9,8 +9,7 @@ type RoomCardProps = {
 };
 
 const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCardProps) => {
-  console.log(underCategories);
-  
+
   return (
     <div className="max-w-[418px] rounded overflow-hidden relative" 
     onClick={onClick}>
@@ -20,7 +19,7 @@ const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCard
       <div className="mt-[13px]">
         <h3 className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[36px] font-medium text-[#17849A]">{title}</h3>
         <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} 
-          className="text-[#000] text-[8px] lg:text-[14px]">
+          className="text-[#000] text-[10px] lg:text-[14px]">
           {features.join(' | ')}
         </p>
       </div>
