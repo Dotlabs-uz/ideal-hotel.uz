@@ -26,7 +26,7 @@ const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCard
       </div>
       <div className="absolute top-2 left-2">
         <h2 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} 
-          className="px-[10px] py-[2px]  rounded-full bg-[#000]/70 text-white font-medium">{underCategories}</h2>
+          className="px-[10px] py-[2px] text-[9px] sm:text-[10px] md:text-[12px] lg:text-[14px] rounded-full bg-[#000]/70 text-white font-medium">{underCategories}</h2>
       </div>
     </div>
   );

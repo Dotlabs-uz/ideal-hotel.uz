@@ -22,6 +22,10 @@ interface numberFond {
         junior: string;
         quadruple: string;
     };
+    modal: {
+        txt: string,
+        btn: string
+    }
   };
 }
 
@@ -63,7 +67,7 @@ const RoomFund = ({ translation }: numberFond) => {
     const locale = (segments[1] as 'ru' | 'uz' | 'en') || 'ru';
 
   return (
-    <section className="pt-[20px] lg:pt-[80px] px-6">
+    <section className="pt-[20px] lg:pt-[80px] px-3 lg:px-6">
       <div>
         <div className="flex lg:justify-between flex-wrap sm:flex-wrap md:flex-wrap items-start gap-0 md:gap-[10px] lg:gap-0 ">
             <h2 style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
@@ -164,9 +168,10 @@ const RoomFund = ({ translation }: numberFond) => {
         </div>
             {selectedRoom && (
                 <CardModal
-                open={open}
-                onOpenChange={setOpen}
-                card={mapRoomToCardData(selectedRoom, locale)}
+                    open={open}
+                    onOpenChange={setOpen}
+                    translation={translation}
+                    card={mapRoomToCardData(selectedRoom, locale)}
                 />
             )}
 

@@ -10,7 +10,7 @@ const ContactsLink = ({ lang = "ru" }: ContactsLinkProps) => {
   const contacts = contactsData[lang];
 
   return (
-    <div className="max-w-[1100px] mb-[50px] px-5 mt-[30px] md:mt-[50px] lg:mt-[80px] lg:px-5 mx-auto">
+    <div className="max-w-[1100px] mb-[50px] px-3 lg:px-6 mt-[30px] md:mt-[50px] lg:mt-[80px] mx-auto">
       <div className="flex flex-col md:flex-row gap-[20px] md:gap-[40px] justify-between text-center md:text-left">
         {contacts.map((item, index) => (
           <div key={index} className="flex flex-col gap-[23px] md:gap-[30px]">

@@ -22,6 +22,10 @@ interface numberFond {
       junior: string;
       quadruple: string;
     };
+    modal: {
+      txt: string,
+      btn: string
+    }
   };
 }
 
@@ -119,6 +123,7 @@ const RoomScreen = ({ translation }: numberFond) => {
         <CardModal
           open={open}
           onOpenChange={setOpen}
+          translation={translation}
           card={mapRoomToCardData(selectedRoom, locale)}
         />
       )}

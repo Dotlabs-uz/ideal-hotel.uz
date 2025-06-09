@@ -35,7 +35,7 @@ export default function GuestReviews({ translation }: Props) {
   });
 
   return (
-    <section className="px-4 py-0 lg:py-16">
+    <section className="px-3 lg:px-6 py-0 lg:py-16">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-[#17849A] text-3xl font-bold">{translation.guest.reviews}</h2>
         <div className="flex gap-2">

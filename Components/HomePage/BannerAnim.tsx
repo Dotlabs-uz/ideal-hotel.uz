@@ -17,7 +17,7 @@ interface BannerProps {
 const BannerAnim = ({ translation }: BannerProps) => {
   return (
     <div className="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[500px] h-[150px] sm:h-[200px] md:h-[300px] lg:h-[500px] bg-[#AFB0B2] rounded-2xl">
-        <div className="relative w-[150px] sm:w-[180px] md:w-[270px] lg:w-[450px] h-[150px] sm:h-[200px] md:h-[300px] lg:h-[500px] rounded-r-2xl bg-[#0D96A6] overflow-hidden flex items-center justify-between bg-cover bg-center pl-5 md:pl-8 lg:pl-12" 
+        <div className="relative w-[180px] sm:w-[180px] md:w-[270px] lg:w-[450px] h-[150px] sm:h-[200px] md:h-[300px] lg:h-[500px] rounded-r-2xl bg-[#0D96A6] overflow-hidden flex items-center justify-between bg-cover bg-center pl-5 md:pl-8 lg:pl-12" 
         style={{ backgroundImage: "url('/BannerImages/ten.png')" }}>
 
         <div className="text-white z-10 w-[120px] md:w-[150px] lg:w-[200px]">

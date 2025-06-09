@@ -81,7 +81,7 @@ const Footer: React.FC<FooterProps> = ({ translation, lang }) => {
           <div className="flex flex-col lg:flex-row lg:gap-15 gap-2 items-center lg:items-start">
             <p>ALL RIGHTS RESERVED. COPYRIGHTS © 2025 LTD.</p>
             <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-5">
-              <Link href={`/${lang}/terms`}>TERMS & CONDITIONS</Link>
+              <p>TERMS & CONDITIONS</p>
               <Link href={`/${lang}/privacy-policy`}>PRIVACY POLICY</Link>
             </div>
           </div>

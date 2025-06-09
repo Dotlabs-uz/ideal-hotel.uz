@@ -20,19 +20,19 @@
         "txt": "Sizning qulayligingiz uchun majmua hududida ko‘plab qo‘shimcha xizmatlar mavjud"
     },
     "numberFond": {
-        "numberFond": "Хона фонди",
-        "enjoyTxt": "Ҳар бир батафсил қулайлигингиз учун диққат билан ўйланилган, бизнинг хоналаримизда ажойиб қулайликдан баҳраманд бўлинг.",
-        "seeAll": "Ҳаммасини кўриш",
-        "all": "Ҳамма",
+        "numberFond": "Xona fondi",
+        "enjoyTxt": "Har bir batafsil qulayligingiz uchun diqqat bilan o‘ylangan, bizning xonalarimizda ajoyib qulaylikdan bahramand bo‘ling.",
+        "seeAll": "Hammasini ko‘rish",
+        "all": "Hamma",
         "standard": "Standart",
         "superior": "Superior",
-        "junior": "Urta lux",
-        "quadruple": "Tõrt õrindiķli"
+        "junior": "O‘rta lyuks",
+        "quadruple": "To‘rt o‘rinli"
     },
     "services": {
-      "servic": "Qulayliklar va xizmatlar",
-      "breackfast": "Nonushta va xizmatlar",
-      "breackfastTxt": "Sizning qulayligingiz uchun majmuada ko'plab qo'shimcha xizmatlar mavjud"
+        "servic": "Qulayliklar va xizmatlar",
+        "breackfast": "Nonushta va xizmatlar",
+        "breackfastTxt": "Sizning qulayligingiz uchun majmuada ko‘plab qo‘shimcha xizmatlar mavjud"
     },
     "Home": {
         "title": "title uz"
@@ -73,7 +73,7 @@
     },
     "contactsMap": {
         "contact": "Kontaktlar",
-        "route": "Yoʻlni belgilash"
+        "route": "Yo‘lni belgilash"
     },
     "guide": {
         "guide": "Yo‘l ko‘rsatkich",
@@ -86,6 +86,10 @@
     },
     "faq": {
         "faq": "Qiyinchiliklar bormi?",
-        "question": "Ko'p so'raladigan savollar"
+        "question": "Ko‘p so‘raladigan savollar"
+    },
+    "modal": {
+        "txt": "Xonadagi qulayliklar",
+        "btn": "Bron qilish"
     }
 }
