@@ -14,7 +14,7 @@ const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCard
   
 
   return (
-    <div className="max-w-[418px] rounded overflow-hidden relative" 
+    <div className="max-w-[418px] cursor-pointer rounded overflow-hidden relative" 
     onClick={onClick}>
       {/* <img src={image} alt={title} className="w-[209px] sm:w-[260px] md:w-[300px] lg:w-[418px] bg-cover bg-center" /> */}
       <Image

@@ -97,7 +97,7 @@ const GalleryTabs = ({
                 key={category.id}
                 onClick={() => handleClick(category.id)}
                 className={clsx(
-                  'relative px-6 py-2 max-w-[275px] rounded-[4px] text-[12px] md:text-[14px] lg:text-[18px] transition-colors',
+                  'relative px-6 py-2 cursor-pointer max-w-[275px] rounded-[4px] text-[12px] md:text-[14px] lg:text-[18px] transition-colors',
                   isActive ? 'text-white' : 'text-gray-800'
                 )}
               >

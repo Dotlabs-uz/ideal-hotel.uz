@@ -128,7 +128,7 @@ const ContactForm = ({ translation }: ContactFormProps) => {
       <button
         type="submit"
         disabled={loading}
-        className="bg-[#17849A] w-full text-white font-medium py-3 px-6 rounded-md"
+        className="bg-[#17849A] cursor-pointer w-full text-white font-medium py-3 px-6 rounded-md"
       >
         {loading ? 'Отправка...' : translation.btn}
       </button>

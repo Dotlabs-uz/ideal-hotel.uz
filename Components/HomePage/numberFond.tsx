@@ -91,7 +91,7 @@ const RoomFund = ({ translation }: numberFond) => {
                         <button
                             key={category.id}
                             onClick={() => handleClick(category.id)}
-                            className={`relative text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] w-full py-2 px-4 rounded-[4px] transition-colors z-10 ${
+                            className={`relative text-[14px] cursor-pointer sm:text-[14px] md:text-[14px] lg:text-[16px] w-full py-2 px-4 rounded-[4px] transition-colors z-10 ${
                             isActive
                                 ? 'text-white'
                                 : 'text-[#17849A] border border-gray-200 hover:bg-gray-50'

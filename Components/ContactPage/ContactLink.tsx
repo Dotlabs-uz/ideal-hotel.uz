@@ -22,7 +22,7 @@ const ContactsLink = ({ lang = "ru" }: ContactsLinkProps) => {
               {item.description}
             </p>
             <div className="flex items-center gap-3 justify-center md:justify-start">
-            <div className="flex items-center gap-3 justify-center md:justify-start">
+            <div className="flex cursor-pointer items-center gap-3 justify-center md:justify-start">
               <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                 <p
                   style={{ fontFamily: 'Monrope, sans-serif', fontWeight: 500 }}

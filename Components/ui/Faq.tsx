@@ -46,7 +46,7 @@ const FAQ = ({ translation }: Props) => {
             <button
               style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}}
               onClick={() => toggle(index)}
-              className="w-full flex justify-between items-center text-left text-[#17849A] font-medium text-[18px] sm:text-[18px] md:text-[20px] lg:text-[24px]"
+              className="w-full cursor-pointer flex justify-between items-center text-left text-[#17849A] font-medium text-[18px] sm:text-[18px] md:text-[20px] lg:text-[24px]"
             >
               {item.question[locale]}
               <motion.div
