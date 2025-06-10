@@ -55,7 +55,10 @@
         "name": "Your name",
         "mail": "Your email",
         "messages": "Leave us a message",
-        "btn": "Send message"
+        "btn": "Send message",
+        "policy": "At your own discretion!",
+        "succsess": "Message sent successfully!",
+        "unsuccsess": "Sending error. Try again later."
     },
     "contactInfo": {
         "header": "Send us a message!",

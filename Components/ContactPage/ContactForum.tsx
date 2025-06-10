@@ -12,6 +12,9 @@ interface ContactFormProps {
     mail: string;
     messages: string;
     btn: string;
+    policy: string;
+    succsess: string;
+    unsuccsess: string;
   };
 }
 
@@ -132,13 +135,13 @@ const ContactForm = ({ translation }: ContactFormProps) => {
       >
         {loading ? 'Отправка...' : translation.btn}
       </button>
-       <p className="text-gray-400 text-[12px] text-right mt-1">По собственному усмотрению!</p>
+       <p className="text-gray-400 text-[12px] text-right mt-1">{translation.policy}</p>
 
       {success === true && (
-        <p className="text-green-600 mt-3 text-[13px] text-right">✅ Сообщение успешно отправлено!</p>
+        <p className="text-green-600 mt-3 text-[13px] text-right">✅ {translation.succsess}</p>
       )}
       {success === false && (
-        <p className="text-red-600 mt-3 text-[13px] text-right">❌ Ошибка отправки. Попробуйте позже.</p>
+        <p className="text-red-600 mt-3 text-[13px] text-right">❌ {translation.unsuccsess}</p>
       )}
     </form>
   );

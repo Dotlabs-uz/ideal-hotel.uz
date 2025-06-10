@@ -19,7 +19,10 @@
   animation: marquee 20s linear infinite;
 }
 
-
+.backdrop-blur-md {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 
 
 @font-face {

@@ -26,7 +26,7 @@ const Header = ({ lang, translation }: HeaderProps) => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <Menu size={24} />
+            {!isOpen && <Menu size={24} />}
           </button>
         </div>
         <Link href={`/${lang}`} className="flex items-center gap-2">
@@ -68,12 +68,14 @@ const Header = ({ lang, translation }: HeaderProps) => {
       <AnimatePresence>
         <div className="z-50">
           {isOpen && (
-                  <MenuMob
-                    isOpen={isOpen}
-                    setIsOpen={setIsOpen}
-                    lang={lang}
-                    translation={translation}
-                  />
+              <div className="w-full h-screen">
+                <MenuMob
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                  lang={lang}
+                  translation={translation}
+                />
+              </div>
           )}
         </div>
       </AnimatePresence>

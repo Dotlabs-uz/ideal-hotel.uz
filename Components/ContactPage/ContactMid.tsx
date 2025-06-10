@@ -11,6 +11,9 @@ interface contactForm {
             mail: string,
             messages: string,
             btn: string,
+            policy: string,
+            succsess: string;
+            unsuccsess: string;
         },
         contactInfo: {
             header: string,

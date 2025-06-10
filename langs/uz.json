@@ -55,7 +55,10 @@
         "name": "Ismingiz",
         "mail": "Elektron pochtangiz",
         "messages": "Bizga xabar qoldiring",
-        "btn": "Xabar yuborish"
+        "btn": "Xabar yuborish",
+        "policy": "O'z ixtiyoringiz bilan!",
+        "succsess": "Xabar muvaffaqiyatli yuborildi!",
+        "unsuccsess": "Yuborish xatosi. Keyinroq qayta urining."
     },
     "contactInfo": {
         "header": "Bizga xabar yuboring!",
