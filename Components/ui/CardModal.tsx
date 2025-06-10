@@ -57,10 +57,18 @@ const CardDrawer = ({ open, onOpenChange, card, translation }: CardDrawerProps) 
             <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col lg:w-1/2 space-y-4">
                 <div className="relative aspect-video overflow-hidden rounded-[4px]">
-                <img
+                {/* <img
                     src={card.images[currentIndex]}
                     alt={card.title}
                     className="w-full h-full object-cover"
+                /> */}
+                <Image
+                  src={card.images[currentIndex]}
+                  alt={card.title}
+                  fill
+                  className="object-cover"
+                  placeholder="blur"
+                  blurDataURL="/images/placeholder.jpg" // это должен быть небольшой base64 или путь к маленькой копии
                 />
                 <button
                     className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full p-2"
@@ -78,14 +86,27 @@ const CardDrawer = ({ open, onOpenChange, card, translation }: CardDrawerProps) 
 
                 <div className="hidden lg:grid grid-cols-3 gap-3">
                 {card.images.map((img, idx) => (
-                    <img
-                    key={idx}
-                    src={img}
-                    alt={`preview-${idx}`}
-                    className={`rounded-[4px] object-cover w-full cursor-pointer border-2 h-[120px] transition-all duration-200 ${
+                    // <img
+                    // key={idx}
+                    // src={img}
+                    // alt={`preview-${idx}`}
+                    // className={`rounded-[4px] object-cover w-full cursor-pointer border-2 h-[120px] transition-all duration-200 ${
+                    //     currentIndex === idx ? 'border-[#00748E]' : 'border-transparent'
+                    // }`}
+                    // onClick={() => setCurrentIndex(idx)}
+                    // />
+                    <Image
+                      key={idx}
+                      src={img}
+                      alt={`preview-${idx}`}
+                      width={160}
+                      height={120}
+                      className={`rounded-[4px] object-cover w-full cursor-pointer border-2 h-[120px] transition-all duration-200 ${
                         currentIndex === idx ? 'border-[#00748E]' : 'border-transparent'
-                    }`}
-                    onClick={() => setCurrentIndex(idx)}
+                      }`}
+                      placeholder="blur"
+                      blurDataURL="/images/placeholder.jpg"
+                      onClick={() => setCurrentIndex(idx)}
                     />
                 ))}
                 </div>

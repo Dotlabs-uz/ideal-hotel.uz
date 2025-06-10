@@ -17,7 +17,7 @@ const Attractions = () => {
               className="bg-[#F8F8F8] h-[230px] md:h-[250px] lg:h-[288px] flex-shrink-0 relative p-6 rounded-lg flex flex-col gap-4"
             >
               <div className="flex items-center gap-3">
-                <Image src={item.icon} alt='location' width={47} height={46} className='w-[24px] md:w-[35px] lg:w-[46px]' />
+                <Image src={item.icon} alt='location' width={47} height={46} className='w-[24px] md:w-[35px] lg:w-[46px] rounded-[6px]' />
                 <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="w-[120px] md:w-[130px] lg:w-[150px] text-[#00232A] text-[12px] md:text-[14px] lg:text-[16px]">
                   {item.title[locale]}
                 </p>

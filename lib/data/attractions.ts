@@ -49,7 +49,7 @@ export const attractions = [
   },
   {
     id: 3,
-    icon: "/images/building.png",
+    icon: "/images/book.png",
     title: {
       ru: 'Библиотека им. Пушкина',
       uz: 'Pushkin nomidagi kutubxona',
@@ -73,7 +73,7 @@ export const attractions = [
   },
   {
     id: 4,
-    icon: "/images/building.png",
+    icon: "/images/statue.jpeg",
     title: {
       ru: 'Бульвар Алишера Навои',
       uz: 'Alisher Navoiy xiyoboni',

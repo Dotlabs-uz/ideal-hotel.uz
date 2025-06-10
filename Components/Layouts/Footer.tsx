@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ translation, lang }) => {
             <p>ALL RIGHTS RESERVED. COPYRIGHTS © 2025 LTD.</p>
             <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-5">
               <p>TERMS & CONDITIONS</p>
-              <Link href={`/${lang}/privacy-policy`}>PRIVACY POLICY</Link>
+              {/* <Link href={`/${lang}/privacy-policy`}>PRIVACY POLICY</Link> */}
             </div>
           </div>
 

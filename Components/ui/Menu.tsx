@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import LanguageSwitcher from "./TranslateChange";
 import { Locale } from "@/i18n.config";
+import { Menu, X } from "lucide-react";
 
 interface MenuMobProps {
   isOpen: boolean;
@@ -43,15 +44,18 @@ const MenuMob = ({ translation, lang, isOpen, setIsOpen }: MenuMobProps) => {
   }, [isOpen]);
 
   return (
-    <div className="">
+    <div className="absolute top-0 right-0 left-0">
         <motion.div
             ref={menuRef}
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="md:hidden w-full relative bg-black/90 backdrop-blur h-screen rounded-bl-[20px] rounded-br-[20px] px-3 pb-4 z-50"
+            className="md:hidden w-full relative bg-black/95 backdrop-blur h-screen rounded-bl-[20px] rounded-br-[20px] px-3 pb-4 z-50"
             >
+                <div className="px-[15px] pt-[30px]" onClick={() => setIsOpen(false)}>
+                  <X size={24} />
+                </div>
                 <motion.nav
                 className="flex flex-col gap-4 p-[20px]"
                 initial="hidden"

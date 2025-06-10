@@ -24,10 +24,10 @@ const AboutFooter = ({ translation }: BannerProps) => {
   return (
     <div className="flex flex-col items-center mt-[10px] mb-[20px] lg:mb-[50px]">
             <div className="my-[20px] md:my-[35px] lg:my-[50px]">
-                <h2 className="text-[#17849A] text-[26px] md:text-[32px] lg:text-[38px] leading-10 max-w-[80%] font-medium mx-auto">
+                <h2 className="text-[#17849A] text-[26px] md:text-[32px] lg:text-[38px] leading-10 max-w-[90%] lg:max-w-[95%] font-medium mx-auto">
                   {translation.about.Impression}
                 </h2>
-                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#534B4F] text-[14px] md:text-[16px] lg:text-[18px] max-w-[80%] mt-2 lg:mt-4 mx-auto">
+                <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#534B4F] text-[14px] md:text-[16px] lg:text-[18px] max-w-[90%] lg:max-w-[95%] mt-2 lg:mt-4 mx-auto">
                   {translation.about.impTxt}
                 </p>
             </div>

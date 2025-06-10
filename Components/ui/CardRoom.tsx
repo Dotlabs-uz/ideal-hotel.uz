@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 type RoomCardProps = {
@@ -9,12 +10,23 @@ type RoomCardProps = {
 };
 
 const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCardProps) => {
+  console.log("image src", image);
+  
 
   return (
     <div className="max-w-[418px] rounded overflow-hidden relative" 
     onClick={onClick}>
-      <img src={image} alt={title} className="w-[209px] sm:w-[260px] md:w-[300px] lg:w-[418px] bg-cover bg-center" />
-      {/* h-[209px] sm:h-[260px] md:h-[300px] lg:h-[419px] */}
+      {/* <img src={image} alt={title} className="w-[209px] sm:w-[260px] md:w-[300px] lg:w-[418px] bg-cover bg-center" /> */}
+      <Image
+        src={image}
+        alt={title}
+        width={418} 
+        height={280}
+        className="w-[209px] sm:w-[260px] md:w-[300px] lg:w-[418px] object-cover rounded"
+        placeholder="blur"
+        // blurDataURL="/images/placeholder-blur.jpg" 
+        blurDataURL="/images/room/juniorSuit/junior_bedroom_home_1.webp" 
+      />
 
       <div className="mt-[13px]">
         <h3 className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[36px] font-medium text-[#17849A]">{title}</h3>

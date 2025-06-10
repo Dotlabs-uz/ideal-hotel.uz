@@ -14,7 +14,7 @@ type BannerProps = {
 const AboutBanner = ({ translation }: BannerProps) => {
   return (
     <div className="w-full lg:h-[600px] bg-[#17849A]">
-      <div className="pt-[80px] flex items-center justify-center z-10">
+      <div className="pt-[80px] md:pt-[120px] lg:pt-[150px] flex items-center justify-center z-10">
         <div className="">
             <h2 className="text-white text-[40px] md:text-[60px] lg:text-[88px] font-bold text-center">
             {translation.about.header}
