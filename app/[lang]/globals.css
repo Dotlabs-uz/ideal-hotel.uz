@@ -19,12 +19,6 @@
   animation: marquee 20s linear infinite;
 }
 
-.backdrop-blur-md {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-
 @font-face {
   font-family: 'TRIAL Oceanic';
   src: url('/fonts/TRIAL-Oceanic/TRIAL_Oceanic-Bold-BF6487cfe5cfe3d.otf') format('opentype');
