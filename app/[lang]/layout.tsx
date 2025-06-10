@@ -10,7 +10,6 @@ import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import PageTransition from "@/Components/ui/PageTransition";
 
-// Подключение кастомного шрифта
 const Oceanic = localFont({
   src: [
     {
@@ -26,13 +25,12 @@ const Oceanic = localFont({
   ],
 });
 
-// 🔥 Генерация метаданных с учетом языка
 export async function generateMetadata({
   params,
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const { lang } = params;
+  const { lang } = await params;
   const t = await getDictionary(lang);
 
   return {
@@ -50,7 +48,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.jpg", // путь к изображению в /public
+          url: "/og-image.jpg",
           width: 1200,
           height: 630,
           alt: "Ideal Hotel Samarkand",
@@ -66,7 +64,6 @@ export async function generateMetadata({
   };
 }
 
-// 🧱 Основный layout
 export default async function RootLayout({
   children,
   params,
@@ -74,25 +71,19 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
-  const { lang } = params;
+  const { lang } = await params;
   const translation = await getDictionary(lang);
 
   return (
     <html lang={lang} className={Oceanic.className}>
-      <head>
-        <Script
-          src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-          strategy="afterInteractive"
-        />
-      </head>
       <body>
-        <PageTransition>
           <div style={{ fontFamily: "Monrope, sans-serif" }}>
             <Header lang={lang} translation={translation} />
           </div>
-          {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           <Footer lang={lang} translation={translation.footer} />
-        </PageTransition>
       </body>
     </html>
   );

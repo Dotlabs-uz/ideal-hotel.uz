@@ -10,8 +10,6 @@ type RoomCardProps = {
 };
 
 const RoomCard = ({ image, title, features, underCategories, onClick }: RoomCardProps) => {
-  console.log("image src", image);
-  
 
   return (
     <div className="max-w-[418px] cursor-pointer rounded overflow-hidden relative" 
