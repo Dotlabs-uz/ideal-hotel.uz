@@ -10,11 +10,8 @@ import Reveal from "@/Components/ui/Reveal";
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/i18n.config";
 
-type Params = Promise<{ lang: Locale }>
-
-export default async function Home({ params }: { params: Params }) {
-  const { lang } = await params;
-  const translation = await getDictionary(lang);
+export default async function Home({ params }: { params: { lang: Locale } }) {
+  const translation = await getDictionary(params.lang);
 
   return (
     <>
@@ -25,7 +22,7 @@ export default async function Home({ params }: { params: Params }) {
         </Reveal>
 
         <Reveal direction="bottom">
-          <GalleryTabs translation={translation} lang={lang} />
+          <GalleryTabs translation={translation} lang={params.lang} />
         </Reveal>
 
         <Reveal direction="bottom">
@@ -51,4 +48,3 @@ export default async function Home({ params }: { params: Params }) {
     </>
   );
 }
-

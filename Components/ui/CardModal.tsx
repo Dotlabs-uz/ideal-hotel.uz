@@ -68,7 +68,8 @@ const CardDrawer = ({ open, onOpenChange, card, translation }: CardDrawerProps) 
                   fill
                   className="object-cover"
                   placeholder="blur"
-                  blurDataURL="/images/placeholder.jpg" // это должен быть небольшой base64 или путь к маленькой копии
+                  blurDataURL="/images/placeholder.jpg"
+                  priority
                 />
                 <button
                     className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full p-2"
