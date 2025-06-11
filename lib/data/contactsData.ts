@@ -4,8 +4,8 @@ export const contactsData = {
       icon: "/images/icon/phone.png",
       title: "Телефон",
       description: "Если у вас есть вопросы или нужна помощь — звоните нам.",
-      href: "tel:+998910309010",
-      contact: "+998 11 222 12 34"
+      href: "tel:+998662331107",
+      contact: "+998 66 233 11 07"
     },
     {
       icon: "/images/icon/mail.png",
@@ -28,8 +28,8 @@ export const contactsData = {
       icon: "/images/icon/phone.png",
       title: "Phone",
       description: "If you have any questions or need help, feel free to call us.",
-      contact: "+998 11 222 12 34",
-      href: "tel:+998910309010"
+      contact: "+998 66 233 11 07",
+      href: "tel:+998662331107"
     },
     {
       icon: "/images/icon/mail.png",
@@ -52,8 +52,8 @@ export const contactsData = {
       icon: "/images/icon/phone.png",
       title: "Telefon",
       description: "Savollaringiz bo‘lsa yoki yordam kerak bo‘lsa, bizga qo‘ng‘iroq qiling.",
-      contact: "+998 11 222 12 34",
-      href: "tel:+998910309010"
+      contact: "+998 66 233 11 07",
+      href: "tel:+998662331107"
     },
     {
       icon: "/images/icon/mail.png",

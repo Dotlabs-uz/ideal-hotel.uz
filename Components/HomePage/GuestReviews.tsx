@@ -62,7 +62,7 @@ export default function GuestReviews({ translation }: Props) {
             style={{ boxShadow: '0 3px 10px 0 gray' }}
           >
             <div className="flex items-center gap-1 mb-[10px]">
-                <Image src="/review/avatar.png" alt='photo' width={50} height={50} className='w-[30px] md:w-[40px] lg:w-[50px]' />
+                <Image src="/review/avatarReview.jpg" alt='photo' width={50} height={50} className='w-[30px] md:w-[40px] lg:w-[50px]' />
                 <div className="">
                     <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 600}} className="text-[#000000] text-[14px] md:text-[16px] lg:text-[18px] font-semibold">{review.name}</p>
                     <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 400}} className="text-[#000000] text-[10px] md:text-[11px] lg:text-[12px] font-medium">{review.date[locale]}</p>

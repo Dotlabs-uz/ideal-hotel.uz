@@ -17,7 +17,7 @@ export default async function About({params}:{params:Params}) {
             <div className="lg:h-[1050px]">
                 <AboutBanner translation={translation} />
             </div>
-            <div className="max-w-[1260px] mx-auto">
+            <div className="max-w-[1260px] mt-[20px] sm:mt-[30px] md:mt-[50px] lg:mt-[80px] mx-auto">
                 <GalleryTabs lang={lang} translation={translation}  />
                 <AboutFooter translation={translation} />
             </div>
