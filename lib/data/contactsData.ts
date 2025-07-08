@@ -11,8 +11,8 @@ export const contactsData = {
       icon: "/images/icon/mail.png",
       title: "Почта",
       description: "Отправьте нам письмо — мы скоро ответим.",
-      href: "mailto:info@idealhotel.uz",
-      contact: "info@idealhotel.uz"
+      href: "mailto:ideal-hotel@mail.ru",
+      contact: "ideal-hotel@mail.ru"
     },
     {
       icon: "/images/icon/booking.png",
@@ -35,8 +35,8 @@ export const contactsData = {
       icon: "/images/icon/mail.png",
       title: "Email",
       description: "Send us an email and we’ll get back to you shortly.",
-      contact: "info@idealhotel.uz",
-      href: "mailto:info@idealhotel.uz"
+      contact: "ideal-hotel@mail.ru",
+      href: "mailto:ideal-hotel@mail.ru"
     },
     {
       icon: "/images/icon/booking.png",
@@ -59,8 +59,8 @@ export const contactsData = {
       icon: "/images/icon/mail.png",
       title: "Elektron pochta",
       description: "Bizga xat yuboring — tez orada javob beramiz.",
-      contact: "info@idealhotel.uz",
-      href: "mailto:info@idealhotel.uz"
+      contact: "ideal-hotel@mail.ru",
+      href: "mailto:ideal-hotel@mail.ru"
     },
     {
       icon: "/images/icon/booking.png",

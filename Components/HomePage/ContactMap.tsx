@@ -27,7 +27,7 @@ const ContactMap = ({ translation }: Props) => {
             +998 66 233 11 07
             </p>
 
-            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="mt-3 text-[18px]">info@idealhotel.uz</p>
+            <p style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}} className="mt-3 text-[18px]">ideal-hotel@mail.ru</p>
 
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=Ideal+Hotel+Samarkand"
