@@ -9,6 +9,8 @@ import FAQ from "@/Components/ui/Faq";
 import Reveal from "@/Components/ui/Reveal";
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/i18n.config";
+import BeSearchForm from "@/Components/BeForms/BeSearchForm";
+import BeSearchFormHome from "@/Components/BeForms/BeSearchFormHome";
 
 type Params = Promise<{ lang: Locale }>
 
@@ -18,7 +20,9 @@ export default async function Home({ params }: { params: Params }) {
 
   return (
     <>
+      <BeSearchForm lang={lang} className="block-search block-search--home" />
       <Banner translation={translation} />
+      <BeSearchFormHome lang={lang} className="block-search block-search--mobile" />
       <div className="max-w-[1200px] mx-auto space-y-16">
         <Reveal direction="bottom">
           <RoomFund translation={translation} />

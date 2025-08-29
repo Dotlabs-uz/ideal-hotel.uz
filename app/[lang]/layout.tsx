@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./font.css";
+import "./be-style.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import Script from "next/script";
@@ -38,6 +39,9 @@ export async function generateMetadata({
     description: t.metadata?.description || "Ideal-Hotel Samarkand",
     icons: {
       icon: "/favicon.ico",
+    },
+    other: {
+      "google-site-verification": "tMtREG0pOJK4VI-sbfUpphamh-DzuHKBA9N88sYrEfE",
     },
     openGraph: {
       title: t.metadata?.title || "Ideal-Hotel.uz",

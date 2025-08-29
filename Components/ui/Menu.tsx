@@ -122,12 +122,22 @@ useEffect(() => {
                       }}
                       transition={{ duration: 0.3 }}
                   > */}
-                    <a href="https://www.booking.com/hotel/uz/ideal.ru.html?aid=356980&label=gog235jc-1FCAso7gFCBWlkZWFsSCFYA2juAYgBAZgBIbgBB8gBDNgBAegBAfgBAogCAagCA7gCtOGPwgbAAgHSAiQxZWNkM2YwOC03YmU0LTQxNjgtOTlkMS1kYjc2ZDg4NGYyZWXYAgXgAgE&sid=8136d488b6369e48ce8df4ee8b85941e&dest_id=-2578646&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1749283004&srpvid=041937da0ab300a7&type=total&ucfs=1&" target="_blank" rel="noopener noreferrer">
+                    {/*<a href="https://www.booking.com/hotel/uz/ideal.ru.html?aid=356980&label=gog235jc-1FCAso7gFCBWlkZWFsSCFYA2juAYgBAZgBIbgBB8gBDNgBAegBAfgBAogCAagCA7gCtOGPwgbAAgHSAiQxZWNkM2YwOC03YmU0LTQxNjgtOTlkMS1kYjc2ZDg4NGYyZWXYAgXgAgE&sid=8136d488b6369e48ce8df4ee8b85941e&dest_id=-2578646&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1749283004&srpvid=041937da0ab300a7&type=total&ucfs=1&" target="_blank" rel="noopener noreferrer">*/}
+                    {/*  <button*/}
+                    {/*  style={{ boxShadow: '0 0 7px 0 #17849A'}}*/}
+                    {/*  onClick={() => setIsOpen(false)}*/}
+                    {/*  className="absolute bottom-[50px] left-[20px] right-[20px] py-2 border text-black/85 bg-[#fff] hover:bg-white hover:text-black rounded"*/}
+                    {/*  // #17849A*/}
+                    {/*  >*/}
+                    {/*    {translation.Header.Book}*/}
+                    {/*  </button>*/}
+                    {/*</a>*/}
+                    <a href={`/${lang}/booking`} rel="noopener noreferrer">
                       <button
-                      style={{ boxShadow: '0 0 7px 0 #17849A'}}
-                      onClick={() => setIsOpen(false)}
-                      className="absolute bottom-[50px] left-[20px] right-[20px] py-2 border text-black/85 bg-[#fff] hover:bg-white hover:text-black rounded"
-                      // #17849A
+                          style={{ boxShadow: '0 0 7px 0 #17849A'}}
+                          onClick={() => setIsOpen(false)}
+                          className="absolute bottom-[50px] left-[20px] right-[20px] py-2 border text-black/85 bg-[#fff] hover:bg-white hover:text-black rounded"
+                          // #17849A
                       >
                         {translation.Header.Book}
                       </button>

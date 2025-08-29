@@ -5,6 +5,7 @@ import FAQ from "@/Components/ui/Faq";
 import HeroRooms from "@/Components/ui/nextBanner";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+import BeSearchForm from "@/Components/BeForms/BeSearchForm";
 
 type Params = Promise<{ lang: Locale }>
 
@@ -16,6 +17,7 @@ export default async function Contact({params}:{params:Params}) {
   return (
         <div className="">
           <HeroRooms translation={translation.contact}/>
+          <BeSearchForm lang={lang} />
           <ContactsLink lang={lang} />
           <ContactMid translation={translation}/>
           <FAQ translation={translation} />
