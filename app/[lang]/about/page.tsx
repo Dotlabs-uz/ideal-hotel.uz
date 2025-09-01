@@ -3,6 +3,7 @@ import AboutFooter from "@/Components/AboutPage/AboutFooter";
 import GalleryTabs from "@/Components/HomePage/GalleryTabs";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+import BeSearchForm from "@/Components/BeForms/BeSearchForm";
 
 type Params = Promise<{ lang: Locale }>
 
@@ -18,6 +19,7 @@ export default async function About({params}:{params:Params}) {
                 <AboutBanner translation={translation} />
             </div>
             <div className="max-w-[1260px] mt-[20px] sm:mt-[30px] md:mt-[50px] lg:mt-[80px] mx-auto">
+                <BeSearchForm className="block-search block-search--about" lang={lang} />
                 <GalleryTabs lang={lang} translation={translation}  />
                 <AboutFooter translation={translation} />
             </div>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useParams } from "next/navigation";
 
 interface BannerProps {
   translation: {
@@ -15,6 +16,8 @@ interface BannerProps {
 }
 
 const BannerAnim = ({ translation }: BannerProps) => {
+  const params = useParams();
+  const lang = params?.lang as string;
   return (
     <div className="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[500px] h-[150px] sm:h-[200px] md:h-[300px] lg:h-[500px] bg-[#AFB0B2] rounded-2xl">
         <div className="relative w-[180px] sm:w-[180px] md:w-[270px] lg:w-[450px] h-[150px] sm:h-[200px] md:h-[300px] lg:h-[500px] rounded-r-2xl bg-[#0D96A6] overflow-hidden flex items-center justify-between bg-cover bg-center pl-5 md:pl-8 lg:pl-12" 
@@ -26,12 +29,20 @@ const BannerAnim = ({ translation }: BannerProps) => {
               {translation.banner.animationTxt}
             </h2>
             <div className="">
+                {/*<Link*/}
+                {/*  style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}*/}
+                {/*  href={'https://www.booking.com/hotel/uz/ideal.ru.html?aid=356980&label=gog235jc-1FCAso7gFCBWlkZWFsSCFYA2juAYgBAZgBIbgBB8gBDNgBAegBAfgBAogCAagCA7gCtOGPwgbAAgHSAiQxZWNkM2YwOC03YmU0LTQxNjgtOTlkMS1kYjc2ZDg4NGYyZWXYAgXgAgE&sid=8136d488b6369e48ce8df4ee8b85941e&dest_id=-2578646&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1749283004&srpvid=041937da0ab300a7&type=total&ucfs=1&'}*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*  className='px-[20px] md:px-[39px] py-1 md:py-2 rounded-[4px] text-[12px] sm:text-[14px] transition-colors text-[#fff] border border-[#fff] hover:bg-gray-50 inline-block text-center'*/}
+                {/*>*/}
+                {/*  {translation.banner.Book}*/}
+                {/*</Link>*/}
                 <Link
-                  style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
-                  href={'https://www.booking.com/hotel/uz/ideal.ru.html?aid=356980&label=gog235jc-1FCAso7gFCBWlkZWFsSCFYA2juAYgBAZgBIbgBB8gBDNgBAegBAfgBAogCAagCA7gCtOGPwgbAAgHSAiQxZWNkM2YwOC03YmU0LTQxNjgtOTlkMS1kYjc2ZDg4NGYyZWXYAgXgAgE&sid=8136d488b6369e48ce8df4ee8b85941e&dest_id=-2578646&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1749283004&srpvid=041937da0ab300a7&type=total&ucfs=1&'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className='px-[20px] md:px-[39px] py-1 md:py-2 rounded-[4px] text-[12px] sm:text-[14px] transition-colors text-[#fff] border border-[#fff] hover:bg-gray-50 inline-block text-center'
+                    style={{fontFamily: 'Monrope, sans-serif', fontWeight: 300}}
+                    href={`/${lang}/booking`}
+                    rel="noopener noreferrer"
+                    className='px-[20px] md:px-[39px] py-1 md:py-2 rounded-[4px] text-[12px] sm:text-[14px] transition-colors text-[#fff] border border-[#fff] hover:bg-gray-50 inline-block text-center'
                 >
                   {translation.banner.Book}
                 </Link>

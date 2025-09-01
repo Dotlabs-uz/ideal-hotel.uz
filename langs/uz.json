@@ -8,7 +8,7 @@
         "Marquee": "Eksklyuziv taklif: Birinchi mehmonxonangizga 20% chegirma – faqat cheklangan muddat! Hozir band qiling."
     },
     "metadata": {
-        "title": "Ideal Mehmonxonasi — Samarqand",
+        "title": "Ideal Mehmonxonasi — Samarqand, Rasmiy sayt",
         "description": "Zamonaviy va qulay mehmonxona Samarqand markazida. Xonangizni onlayn band qiling!"
     },
     "banner": {
@@ -48,6 +48,10 @@
     "contact": {
         "numberFond": "Aloqalar",
         "subtitle": "Agar sizga buyurtma berishda yordam yoki qo‘llab-quvvatlash kerak bo‘lsa, quyidagi kontaktlar orqali biz bilan bog‘laning."
+    },
+    "booking": {
+        "numberFond": "Bronlash",
+        "subtitle": ""
     },
     "contactForm": {
         "header": "Bizga xabar qoldiring",

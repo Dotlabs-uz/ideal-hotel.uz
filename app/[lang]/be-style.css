@@ -1,0 +1,57 @@
+#be-booking-form {
+    width: 100%;
+    max-width: 1222px;
+    margin: 10px auto;
+    padding: 0 5px;
+}
+
+#tl-booking-cart {
+    z-index: 1 !important;
+}
+
+#block-search,
+#block-search * {
+    box-sizing: border-box;
+}
+
+#block-search {
+    background: #18181b;
+}
+
+#block-search.block-search--about {
+    margin-top: 100px;
+}
+
+#block-search.block-search--home {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    margin-top: 138px;
+}
+
+.be-container {
+    max-width: 1272px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#block-search.block-search--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    #block-search.block-search--about {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    #block-search.block-search--home {
+        display: none;
+    }
+
+    #block-search.block-search--mobile {
+        display: block;
+    }
+}
